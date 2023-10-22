@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <h2>main</h2>
+    <a th:href="@{/test/test/view}">test page</a>
+    <button onclick="onWindowTestPage()">window popup testpage</button>
+    <button onclick="onWindowTestPageLoadpage()">window popup testpage</button>
+    <script>
+        function onWindowTestPage() {
+            window.open("/test/test/view")
+        }
+
+        function onWindowTestPageLoadpage() {
+            window.open("/?loadpage=/test/test/view");
+        }
+    </script>
+</html>

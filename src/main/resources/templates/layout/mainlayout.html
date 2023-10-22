@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<body class="body animate-fade-in">
+<div class="bodyWrap">
+    <div id="spin-progress" style="position:absolute; width:100%; height:100%; z-index: 21200; background-color: rgba(255,255,255,0.7); margin:0rem; display:none">
+    </div>
+
+    <h1>mainlayout</h1>
+
+    <div class="container is-header">
+        <!-- nav -->
+        <!-- side -->
+        <div class="container is-page" id="mainBody">
+            <div class="columns is-page" style="justify-content:center;">
+                <div class="page" style='width:100%;text-align:center;'>
+                    <div class="tab-contents is-mdi" style='display:inline-block;'>
+                        <!-- 메인 페이지 시작... -->
+
+                        <!-- 메인 페이지 끝... -->
+                    </div>
+                </div>
+                <input type="hidden" id="loadpage" name="loadpage" th:value="${loadpage}">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let sLoadPageValue = document.getElementById("loadpage").value;
+            mainLoad(sLoadPageValue);
+        }
+
+        function mainLoad(sUrl) {
+            var iframeEl = document.createElement('iframe');
+            iframeEl.style.width = '1360px';
+            iframeEl.style.height = '1000px';
+            iframeEl.src = sUrl;
+            iframeEl.name = "mainframe";
+
+            //console.log('breadcrumb:',iframeEl.dataset['breadcrumb']);
+            // var breadcrumb = iframeEl.dataset['breadcrumb'].split('>');
+            // //console.log('breadcrumb:',breadcrumb);
+            // var tabEl = document.createElement('template');
+            // tabEl.innerHTML = '<li class="tab is-mdi is-active">'
+            //     + '<a href="#!" ' + getDataAttribute(iframeEl.dataset) + ' rel="noopener">' + breadcrumb[2] + '</a>'
+            //     + '</li>';
+            //
+            var tebContent = document.getElementsByClassName("tab-contents")[0];
+
+            tebContent.appendChild(iframeEl);
+
+            // tabEl = Ustra._getChildNodes(tabEl)[0];
+            // mdiTabUl.append(tabEl);
+            //
+            // var frameWrapper = document.querySelector('.tab-contents.is-mdi');
+            // var container = document.createElement('div');
+            // var pageBody = document.createElement('div');
+            //
+            // frameWrapper.appendChild(container);
+            // container.appendChild(pageBody);
+            // pageBody.appendChild(iframeEl);
+            //
+            // $(container).addClass('tab-content is-active');
+            // $(pageBody).addClass('page-body');
+            //
+            // iframeEl.addEventListener('load', function() {
+            //     _pageLoaded = true;
+            // });
+        }
+
+    </script>
+</div>
+</body>
+</html>
