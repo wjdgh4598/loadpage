@@ -1,0 +1,981 @@
+$column-gap: 10rem !default;
+
+.column {
+    // display: block;
+    flex: 1;
+
+    @include to-mobile {
+        &.is-narrow-mobile {
+            flex: none;
+        }
+
+        &.is-full-mobile {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths-mobile {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters-mobile {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds-mobile {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths-mobile {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half-mobile {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths-mobile {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third-mobile {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter-mobile {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth-mobile {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths-mobile {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters-mobile {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds-mobile {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths-mobile {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half-mobile {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-fifths-mobile {
+            margin-left: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third-mobile {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter-mobile {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth-mobile {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i}-mobile {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i}-mobile {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    @include to-tablet {
+        &.is-narrow,
+        &.is-narrow-tablet {
+            flex: none;
+        }
+
+        &.is-full,
+        &.is-full-tablet {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths,
+        &.is-four-fifths-tablet {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters,
+        &.is-three-quarters-tablet {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds,
+        &.is-two-thirds-tablet {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths,
+        &.is-three-fifths-tablet {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half,
+        &.is-half-tablet {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths,
+        &.is-two-fifths-tablet {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third,
+        &.is-one-third-tablet {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter,
+        &.is-one-quarter-tablet {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth,
+        &.is-one-fifth-tablet {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths,
+        &.is-offset-four-fifths-tablet {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters,
+        &.is-offset-three-quarters-tablet {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds,
+        &.is-offset-two-thirds-tablet {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths,
+        &.is-offset-three-fifths-tablet {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half,
+        &.is-offset-half-tablet {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-fifths,
+        &.is-offset-two-fifths-tablet {
+            margin-left: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third,
+        &.is-offset-one-third-tablet {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter,
+        &.is-offset-one-quarter-tablet {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth,
+        &.is-offset-one-fifth-tablet {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i},
+            &.is-#{$i}-tablet {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i},
+            &.is-offset-#{$i}-tablet {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    @include from-tablet {
+        &.is-narrow,
+        &.is-narrow-tablet {
+            flex: none;
+        }
+
+        &.is-full,
+        &.is-full-tablet {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths,
+        &.is-four-fifths-tablet {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters,
+        &.is-three-quarters-tablet {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds,
+        &.is-two-thirds-tablet {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths,
+        &.is-three-fifths-tablet {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half,
+        &.is-half-tablet {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths,
+        &.is-two-fifths-tablet {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third,
+        &.is-one-third-tablet {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter,
+        &.is-one-quarter-tablet {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth,
+        &.is-one-fifth-tablet {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths,
+        &.is-offset-four-fifths-tablet {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters,
+        &.is-offset-three-quarters-tablet {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds,
+        &.is-offset-two-thirds-tablet {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths,
+        &.is-offset-three-fifths-tablet {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half,
+        &.is-offset-half-tablet {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-fifths,
+        &.is-offset-two-fifths-tablet {
+            margin-left: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third,
+        &.is-offset-one-third-tablet {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter,
+        &.is-offset-one-quarter-tablet {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth,
+        &.is-offset-one-fifth-tablet {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i},
+            &.is-#{$i}-tablet {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i},
+            &.is-offset-#{$i}-tablet {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    @include from-desktop {
+        &.is-narrow-desktop {
+            flex: none;
+        }
+
+        &.is-full-desktop {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths-desktop {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters-desktop {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds-desktop {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths-desktop {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half-desktop {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths-desktop {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third-desktop {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter-desktop {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth-desktop {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths-desktop {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters-desktop {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds-desktop {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths-desktop {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half-desktop {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-fifths-desktop {
+            margin-left: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third-desktop {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter-desktop {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth-desktop {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i}-desktop {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i}-desktop {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    @include from-widescreen {
+        &.is-narrow-widescreen {
+            flex: none;
+        }
+
+        &.is-full-widescreen {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths-widescreen {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters-widescreen {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds-widescreen {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths-widescreen {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half-widescreen {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths-widescreen {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third-widescreen {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter-widescreen {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth-widescreen {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths-widescreen {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters-widescreen {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds-widescreen {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths-widescreen {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half-widescreen {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third-widescreen {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter-widescreen {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth-widescreen {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i}-widescreen {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i}-widescreen {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    @include from-fullhd {
+        &.is-narrow-fullhd {
+            flex: none;
+        }
+
+        &.is-full-fullhd {
+            flex: none;
+            width: calc(100% - 2 * #{$column-gap});
+        }
+
+        &.is-four-fifths-fullhd {
+            flex: none;
+            width: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-three-quarters-fullhd {
+            flex: none;
+            width: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-two-thirds-fullhd {
+            flex: none;
+            width: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-three-fifths-fullhd {
+            flex: none;
+            width: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-half-fullhd {
+            flex: none;
+            width: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-two-fifths-fullhd {
+            flex: none;
+            width: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-one-third-fullhd {
+            flex: none;
+            width: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-one-quarter-fullhd {
+            flex: none;
+            width: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-one-fifth-fullhd {
+            flex: none;
+            width: calc(20% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-four-fifths-fullhd {
+            margin-left: calc(80% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-quarters-fullhd {
+            margin-left: calc(75% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-thirds-fullhd {
+            margin-left: calc(66.6666% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-three-fifths-fullhd {
+            margin-left: calc(60% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-half-fullhd {
+            margin-left: calc(50% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-two-fifths-fullhd {
+            margin-left: calc(40% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-third-fullhd {
+            margin-left: calc(33.3333% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-quarter-fullhd {
+            margin-left: calc(25% - 2 * #{$column-gap});
+        }
+
+        &.is-offset-one-fifth-fullhd {
+            margin-left: calc(20% - 2 * #{$column-gap});
+        }
+
+        @for $i from 0 through 12 {
+            &.is-#{$i}-fullhd {
+                $width: percentage(calc($i / 12));
+                flex: none;
+                width: calc(#{$width} - 2 * #{$column-gap});
+            }
+
+            &.is-offset-#{$i}-fullhd {
+                margin-left: percentage(calc($i / 12));
+            }
+        }
+    }
+
+    &.is-narrow {
+        flex: none;
+
+        &.is-axis {
+            margin: 0 20rem;
+        }
+    }
+
+    &.is-fullwidth {
+        flex: 0 auto;
+        width: 100%;
+    }
+
+    &.is-half {
+        flex: 0 auto;
+        width: calc((100% / 2) - (#{$column-gap} * 2));
+    }
+
+    &.is-one-thirds {
+        flex: 0 auto;
+        width: calc((100% / 3) - #{$column-gap});
+    }
+
+    &.is-two-thirds {
+        flex: 0 auto;
+        width: calc((100% * 2 / 3) - #{$column-gap});
+    }
+
+    &.is-one-quarter {
+        flex: 0 auto;
+        width: calc((100% / 4) - (#{$column-gap} * 2));
+    }
+
+    &.is-three-quarter {
+        flex: 0 auto;
+        width: calc((100% * 3 / 4) - #{$column-gap});
+    }
+
+    &.is-1 {
+        flex: 0 auto;
+        width: calc((100% / 12) - (1rem / 12));
+    }
+
+    &.is-center {
+        align-self: center;
+    }
+
+    &.has-custom-width {
+        flex: 0 auto;
+    }
+
+    &.is-id-photo {
+        flex: none;
+        margin-right: 5rem;
+        width: 100rem;
+    }
+
+    .columns.is-mobile > &.is-narrow {
+        flex: none;
+    }
+
+    .columns.is-mobile > &.is-full {
+        flex: none;
+        width: calc(100% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-four-fifths {
+        flex: none;
+        width: calc(80% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-three-quarters {
+        flex: none;
+        width: calc(75% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-two-thirds {
+        flex: none;
+        width: calc(66.6666% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-three-fifths {
+        flex: none;
+        width: calc(60% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-half {
+        flex: none;
+        width: calc(50% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-two-fifths {
+        flex: none;
+        width: calc(40% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-one-third {
+        flex: none;
+        width: calc(33.3333% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-one-quarter {
+        flex: none;
+        width: calc(25% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-one-fifth {
+        flex: none;
+        width: calc(20% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-four-fifths {
+        margin-left: calc(80% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-three-quarters {
+        margin-left: calc(75% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-two-thirds {
+        margin-left: calc(66.6666% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-three-fifths {
+        margin-left: calc(60% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-half {
+        margin-left: calc(50% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-two-fifths {
+        margin-left: calc(40% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-one-third {
+        margin-left: calc(33.3333% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-one-quarter {
+        margin-left: calc(25% - 2 * #{$column-gap});
+    }
+
+    .columns.is-mobile > &.is-offset-one-fifth {
+        margin-left: calc(20% - 2 * #{$column-gap});
+    }
+
+    @for $i from 0 through 12 {
+        .columns.is-mobile > &.is-#{$i} {
+            $width: percentage(calc($i / 12));
+            flex: none;
+            width: calc(#{$width} - 2 * #{$column-gap});
+        }
+
+        .columns.is-mobile > &.is-offset-#{$i} {
+            margin-left: percentage(calc($i / 12));
+        }
+    }
+}
+
+.columns {
+    display: flex;
+
+    + .columns {
+        margin-top: 20rem !important;
+    }
+
+    @include from-tablet {
+        &:not(.is-desktop) {
+            display: flex;
+        }
+    }
+    @include from-desktop {
+        &.is-desktop {
+            display: flex;
+        }
+    }
+
+    &.is-centered {
+        justify-content: center;
+    }
+
+    &.is-centered-vertically {
+        align-items: center;
+    }
+
+    &.has-gap {
+        margin: -25rem;
+
+        .column {
+            margin: 25rem 0;
+        }
+    }
+
+    &.is-mdi {
+        justify-content: space-between;
+        position: relative;
+        padding-right: 25rem;
+        background-color: white;
+        box-shadow: 0 -3rem 8rem rgb(0, 0 ,0 ,0.08);
+        transition: 0.1s;
+    }
+
+    &.is-gapless {
+        > .column {
+            margin: 0;
+            // padding-bottom: 10rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15rem;
+        }
+    }
+    
+    &.is-top {
+        align-items: flex-start;
+    }
+
+    &.is-right {
+        justify-content: flex-end;
+
+        .buttons {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &.is-between {
+        justify-content: space-between;
+    }
+
+    &.is-mobile {
+        display: flex;
+    }
+
+    &.is-wrapped {
+        flex-wrap: wrap;
+    }
+
+    &.is-page {
+        overflow-y: auto;
+        overflow-y: overlay;
+        background-color: #f2f5f6;
+    }
+}
+
+@if $variable-columns {
+    .columns {
+        &.is-variable {
+            margin-left: calc(-1 * var(--columnGap));
+            margin-right: calc(-1 * var(--columnGap));
+
+            --columnGap: 7.5rem;
+
+            .column {
+                padding-left: var(--columnGap);
+                padding-right: var(--columnGap);
+            }
+
+            @for $i from 0 through 8 {
+                @include to-mobile {
+                    &.is-#{$i}-mobile {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include from-tablet {
+                    &.is-#{$i}-tablet {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include tablet {
+                    &.is-#{$i}-tablet-only {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include to-tablet {
+                    &.is-#{$i}-tablet {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include from-desktop {
+                    &.is-#{$i}-desktop {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include desktop {
+                    &.is-#{$i}-desktop-only {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include from-widescreen {
+                    &.is-#{$i}-widescreen {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include widescreen {
+                    &.is-#{$i}-widescreen-only {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                @include from-fullhd {
+                    &.is-#{$i}-fullhd {
+                        --columnGap: #{$i * 2.5rem};
+                    }
+                }
+                &.is-#{$i} {
+                    --columnGap: #{$i * 2.5rem};
+                }
+            }
+        }
+    }
+}

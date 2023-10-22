@@ -1,0 +1,48 @@
+.toastui-editor-contents {
+    font-family: Pretendard, sans-serif;
+    font-size: 14px;
+    
+    ul,
+    ol,
+    menu,
+    dir {
+        margin: 0 0 19px;
+        padding-left: 0;
+        text-indent: 0px;
+    }
+
+    ul,
+    ol {
+        > li {
+            &::before {
+                position: inherit;
+            }
+        }
+
+        p {
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    ol {
+        > li {
+            &::before {
+                width: auto;
+                margin-left: 0;
+                color: black;
+            }
+        }
+    }
+
+    p {
+        margin: 0 0 18rem;
+        letter-spacing: -0.4rem;
+        line-height: 21rem;
+        color: black;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}

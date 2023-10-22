@@ -1,0 +1,132 @@
+.panel {
+    border-radius: $radius-large;
+    box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1),
+        0 0rem 0 1rem rgba($scheme-invert, 0.02);
+    font-size: $size-normal;
+
+    &:not(:last-child) {
+        margin-bottom: $block-spacing;
+    }
+
+    @each $name, $components in $colors {
+        $color: nth($components, 1);
+        $color-invert: nth($components, 2);
+
+        &.is-#{$name} {
+            .panel-heading {
+                background-color: $color;
+                color: $color-invert;
+            }
+
+            .panel-tabs {
+                a {
+                    &.is-active {
+                        border-bottom-color: $color;
+                    }
+                }
+            }
+
+            .panel-block {
+                &.is-active {
+                    .panel-icon {
+                        color: $color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.panel-tabs,
+.panel-block {
+    &:not(:last-child) {
+        border-bottom: 1rem solid $border-light;
+    }
+}
+
+.panel-heading {
+    border-radius: $radius-large $radius-large 0 0;
+    padding: 0.75em 1em;
+    background-color: $border-light;
+    font-size: 1.25em;
+    font-weight: $weight-bold;
+    color: $text-strong;
+    line-height: 1.25;
+}
+
+.panel-tabs {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 0.875em;
+
+    a {
+        margin-bottom: -1;
+        border-bottom: 1rem solid $border;
+        padding: 0.5em;
+
+        &.is-active {
+            border-bottom-color: $link-active-border;
+            color: $link-active;
+        }
+    }
+}
+
+.panel-list {
+    a {
+        color: $text;
+
+        &:hover {
+            color: $link;
+        }
+    }
+}
+
+.panel-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5em 0.75em;
+    color: $text-strong;
+
+    input[type="checkbox"] {
+        margin-right: 0.75em;
+    }
+
+    > .control {
+        flex: auto;
+        width: 100%;
+    }
+
+    &.is-wrapped {
+        flex-wrap: wrap;
+    }
+
+    &.is-active {
+        border-left-color: $link;
+        color: $link-active;
+
+        .panel-icon {
+            color: $link;
+        }
+    }
+
+    &:last-child {
+        border-bottom-left-radius: $radius-large;
+        border-bottom-right-radius: $radius-large;
+    }
+}
+
+a.panel-block,
+label.panel-block {
+    cursor: pointer;
+
+    &:hover {
+        background-color: $background;
+    }
+}
+
+.panel-icon {
+    margin-right: 0.75em;
+    color: $text-light;
+}

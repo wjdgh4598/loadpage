@@ -1,0 +1,251 @@
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .tag {
+        margin-bottom: 5rem;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: -5rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    &.is-medium {
+        .tag:not(.is-large) {
+            font-size: $size-normal;
+        }
+    }
+
+    &.is-large {
+        .tag:not(.is-medium) {
+            font-size: $size-medium;
+        }
+    }
+
+    &.is-centered {
+        justify-content: center;
+
+        .tag {
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+        }
+    }
+
+    &.is-right {
+        justify-content: flex-end;
+
+        .tag {
+            &:not(:first-child) {
+                margin-left: 5rem;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.has-addon {
+        .tag {
+            margin-right: 0;
+
+            &:not(:first-child) {
+                margin-left: 0;
+
+                @include ltr {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+                @include rtl {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            &:not(:last-child) {
+                @include ltr {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                @include rtl {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+.tag {
+    &:not(body) {
+        display: inline-flex;
+        position: relative;
+        margin-left: 9rem;
+        border-radius: $radius;
+        padding: 2rem 6rem;
+        background-color: $gray_20;
+        font-size: 13rem;
+
+        &:hover,
+        &.is-hover {
+            .tag-tooltip {
+                display: block;
+            }
+        }
+
+        &:focus,
+        &.is-focus {
+            outline-width: 2rem;
+            outline-color: $blue_60;
+            outline-offset: -2rem;
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            background-color: $gray_10;
+            color: $gray_30;
+        }
+
+        .delete {
+            margin-left: 2.5rem;
+            margin-right: -3.75rem;
+        }
+
+        @each $name, $pair in $colors {
+            $color: nth($pair, 1);
+            $color-invert: nth($pair, 2);
+
+            &.is-#{$name} {
+                background-color: $color;
+                color: $color-invert;
+
+                // If a light and dark colors are provided
+                @if length($pair) > 3 {
+                    $color-light: nth($pair, 3);
+                    $color-dark: nth($pair, 4);
+
+                    &.is-light {
+                        background-color: $color-light;
+                        color: $color-dark;
+                    }
+                }
+            }
+        }
+
+        &.is-normal {
+            font-size: $size-small;
+        }
+
+        &.is-medium {
+            font-size: $size-normal;
+        }
+
+        &.is-large {
+            font-size: $size-medium;
+        }
+
+        .icon {
+            &:first-child:not(:last-child) {
+                margin-left: -0.375em;
+                margin-right: 0.1875em;
+            }
+
+            &:last-child:not(:first-child) {
+                margin-left: 0.1875em;
+                margin-right: -0.375em;
+            }
+
+            &:first-child:last-child {
+                margin-left: -0.375em;
+                margin-right: -0.375em;
+            }
+        }
+
+        &.is-delete {
+            position: relative;
+            margin-left: 1rem;
+            padding: 0;
+            width: 2em;
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: currentColor;
+                transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                transform-origin: center center;
+            }
+
+            &::before {
+                width: 50%;
+                height: 1rem;
+            }
+
+            &::after {
+                width: 1rem;
+                height: 50%;
+            }
+
+            &:hover,
+            &.is-hover,
+            &:focus,
+            &.is-focus {
+                background-color: darken($gray_20, 5%);
+            }
+
+            &.is-active {
+                background-color: darken($gray_20, 10%);
+            }
+        }
+
+        &.is-round {
+            border-radius: 50%;
+        }
+    }
+
+    > span {
+        color: white;
+    }
+}
+
+.tag-tooltip {
+    display: none;
+    position: absolute;
+    top: 25rem;
+    left: 0;
+    z-index: 20;
+    border: 1rem solid #333;
+    padding: 12rem 14rem 6rem;
+    width: 220rem;
+    background-color: $white;
+
+    .hash-tag {
+        margin-top: 10rem;
+        border-top: 1rem solid #dedede;
+        padding-top: 10rem;
+        color: #dedede;
+    }
+}
+
+.tag-tooltip-title {
+    margin-bottom: 5rem;
+}
+
+a.tag {
+    &:hover {
+        text-decoration: underline;
+    }
+}

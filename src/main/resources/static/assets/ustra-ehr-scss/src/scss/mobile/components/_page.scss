@@ -1,0 +1,114 @@
+.page-main {
+    min-height: calc(100vh - 70rem);
+
+    .container {
+        margin-left: 0;
+        padding: 10rem 40rem 30rem;
+        max-width: 1920rem;
+    }
+
+    .column {
+        &.is-one-third {
+            margin: 10rem;
+        }
+    }
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17rem;
+    font-weight: 800;
+    color: #333;
+    text-align: inherit;
+
+    .checkbox {
+        &.is-star {
+            margin-right: 7rem;
+        }
+    }
+
+    .columns {
+        margin-top: -2rem;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 6rem;
+    }
+}
+
+.page {
+    overflow-y: auto;
+    overflow-y: overlay;
+    background-color: #F2F5F6;
+
+    &.is-sub {
+        .page-body {
+            padding: 15rem 18rem;
+        }
+
+        .card {
+            &.is-inside {
+                margin-top: 7rem;
+            }
+        }
+        
+        &.has-footer {
+            .page-body {
+                padding: 20rem 18rem;
+                height: calc(var(--vh, 1vh) * 100 - 59rem - 78rem);
+
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+
+    &.is-white {
+        background-color: white;
+    }
+
+    .left-navbar.is-active ~ & {
+        background-color: rgba(0, 0, 0, 0.23);
+    }
+
+    &.is-off {
+        .checkbox.is-on-off {
+            background-color: #dbdbdb;
+        }
+        
+        .on-off-text {
+            &:first-child {
+                display: none;
+            }
+
+            &:last-child {
+                display: inline;
+            }
+        }
+
+        .control {
+            &.is-select {
+                &::after {
+                    border-color: #dbdbdb !important;
+                }
+            }
+        }
+    }
+}
+
+.page-body {
+    padding: 16rem 18rem;
+    height: calc(var(--vh, 1vh) * 100 - 59rem);
+    min-width: 360rem;
+
+    &::after {
+        content: "";
+        display: block;
+        height: 43rem;
+        flex: 0 0 auto;
+    }
+}

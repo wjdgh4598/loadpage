@@ -1,0 +1,225 @@
+.color {
+    &.is-circle {
+        display: inline-block;
+        margin: 0 10rem 0 0;
+        border-radius: 50%;
+        width: 44rem;
+        height: 44rem;
+        vertical-align: middle;
+
+        &.is-bg,
+        &.is-bg_contrast.is-focus,
+        &.is-border,
+        &.is-field,
+        &.is-text_inverse,
+        &.is-icon.is-inverse {
+            border: 1rem solid $gray_20;
+        }
+    }
+
+    &.is-primary {
+        background-color: $blue_60;
+
+        &.is-active {
+            background-color: $blue_80;
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            background-color: $gray_30;
+        }
+    }
+
+    &.is-secondary {
+        background-color: $gray_80;
+
+        &.is-active {
+            background-color: $gray_60;
+        }
+    }
+
+    &.is-contrast {
+        background-color: $blue_70;
+    }
+
+    &.is-success {
+        background-color: $green_50;
+
+        &.is-bg_contrast {
+            background-color: $green_40;
+        }
+    }
+
+    &.is-warning {
+        background-color: $yellow;
+    }
+
+    &.is-error {
+        background-color: $red_60;
+
+        &.is-active {
+            background-color: $red_80;
+        }
+
+        &.is-bg_contrast {
+            background-color: $red_50;
+        }
+    }
+
+    &.is-info {
+        background-color: $blue_70;
+
+        &.is-bg_contrast {
+            background-color: $blue_50;
+        }
+    }
+
+    &.is-bg {
+        background-color: $white;
+    }
+
+    &.is-bg-secondary {
+        background-color: $gray_10;
+
+        &.is-hover {
+            background-color: $gray_20;
+        }
+
+        &.is-active {
+            background-color: $gray_60;
+        }
+    }
+
+    &.is-bg_tertiary {
+        background-color: $gray_20;
+    }
+
+    &.is-bg_contrast {
+        background-color: $gray_80;
+
+        &.is-focus {
+            background-color: $white;
+        }
+
+        &.is-linked {
+            background-color: $blue_40;
+        }
+    }
+
+    &.is-overlay {
+        background-color: hsla(0, 0%, 20%, 0.5);
+
+        &.color {
+            position: relative;
+        }
+    }
+
+    tr:hover,
+    tr.is-hover,
+    &.is-row.is-hover {
+        background-color: $gray_20;
+    }
+
+    &.is-border {
+        &-primary {
+            background-color: $gray_50;
+        }
+
+        &-secondary {
+            background-color: $gray_100;
+        }
+    }
+
+    &.is-field {
+        background-color: $white;
+    }
+
+    &.is-text {
+        &.is-hover {
+            background-color: $blue_70;
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            background-color: $gray_30;
+        }
+
+        &-heading {
+            background-color: $gray_100;
+        }
+
+        &-body {
+            background-color: $gray_80;
+        }
+
+        &-secondary {
+            background-color: $gray_50;
+        }
+
+        &-tertiary {
+            background-color: $gray_40;
+        }
+
+        &-error {
+            background-color: $red_60;
+        }
+
+        &-inverse {
+            background-color: $white;
+        }
+
+        &-inverse.is-active {
+            background-color: $gray_60;
+        }
+    }
+
+    &.is-icon {
+        background-color: $gray_80;
+
+        fieldset[disabled] &,
+        &[disabled] {
+            background-color: $gray_30;
+        }
+
+        &-secondary {
+            background-color: $gray_50;
+        }
+
+        &.is-inversed {
+            background-color: $white;
+        }
+
+        &-inverse.is-active {
+            background-color: $gray_60;
+        }
+    }
+
+    &.is-hover {
+        background-color: $gray_30;
+    }
+
+    &.is-focus {
+        background-color: $blue_60;
+    }
+
+    &.is-active {
+        background-color: $gray_20;
+    }
+
+    &.is-linked {
+        background-color: $blue_60;
+    }
+
+    &.is-visited {
+        background-color: $purple;
+    }
+
+    &.is-highlighted {
+        background-color: $blue_20;
+    }
+
+    fieldset[disabled] &,
+    &[disabled] {
+        background-color: $gray_10;
+    }
+}

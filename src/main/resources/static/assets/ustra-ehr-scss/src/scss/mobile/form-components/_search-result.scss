@@ -1,0 +1,51 @@
+.search-result {
+    display: none;
+    position: absolute;
+    top: 40rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border: 1rem solid #e5e5e5;
+    border-radius: 3rem;
+    padding: 3rem 0;
+    max-height: 331rem;
+    overflow-y: auto;
+    overflow-y: overlay;
+    background-color: white;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.16);
+}
+
+.search-result-item {
+    padding: 8rem 42rem;
+    background-image: url(../background-images/svg/magnifier-circle.svg);
+    background-repeat: no-repeat;
+    background-position: 13rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    &:hover {
+        background-color: #f6f6f6;
+    }
+}
+
+.search-result-title {
+    display: flex;
+    position: relative;        
+    font-size: 15rem;
+    line-height: 18rem;
+    color: #666;
+}
+
+.search-result-span {
+    &:first-child {
+        font-weight: 700;
+    }
+}
+
+.search-result-categories {
+    font-size: 13rem;
+    line-height: 16rem;
+    color: #9a9a9a;
+}

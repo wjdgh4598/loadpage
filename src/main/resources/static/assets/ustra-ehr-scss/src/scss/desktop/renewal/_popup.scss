@@ -1,0 +1,226 @@
+
+.ui-widget {
+	&.ui-widget-content{
+	  display: none;
+	  overflow: hidden;
+	  position: fixed;
+	  left: 50%;
+	  top: 50%;
+	  z-index: 9992;
+	  min-height: 400rem;
+	  max-height: calc(100vh - 80rem);
+	  background: $white;
+	  border-radius: 8rem;
+	  transform: translate(-50%, -50%);
+	  padding: 0 40rem;
+	  &.is-modalL{
+	    width: 120rem;
+	  }
+	  &.is-modalM{
+	    width: 100rem;
+	  }
+	  &.is-modalS{
+	    width: 80rem;
+	  }
+	  &.is-modalXS{
+	    width: 50rem;
+	  }
+	  .ui-widget-header {
+	    position: absolute;
+	    left:0;
+	    top:0;
+	    width: 100%;
+	    padding: 50rem 40rem 0rem;
+	    .ui-dialog-title {
+	      font-size: 25rem;
+	      font-weight: $font-weight-semi-bold;
+	      line-height: 30rem;
+	    }
+	    .ui-dialog-titlebar-close {
+	      position: absolute;
+	      top:20.5rem;
+	      right: 20rem;
+	      width: 17rem;
+	      height: 17rem;
+	      background-position: center;
+	      background-repeat: no-repeat;
+	      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='18' viewBox='0 0 17 18' fill='none'%3E%3Cpath d='M0.356664 0.856664C0.469436 0.743606 0.603404 0.653907 0.750896 0.592705C0.898388 0.531502 1.05651 0.5 1.21619 0.5C1.37588 0.5 1.53399 0.531502 1.68149 0.592705C1.82898 0.653907 1.96295 0.743606 2.07572 0.856664L8.50032 7.28369L14.9249 0.856664C15.0378 0.743789 15.1718 0.654252 15.3193 0.593164C15.4668 0.532077 15.6248 0.500636 15.7844 0.500636C15.9441 0.500636 16.1021 0.532077 16.2496 0.593164C16.3971 0.654252 16.5311 0.743789 16.644 0.856664C16.7568 0.969538 16.8464 1.10354 16.9075 1.25102C16.9686 1.3985 17 1.55656 17 1.71619C17 1.87582 16.9686 2.03389 16.9075 2.18136C16.8464 2.32884 16.7568 2.46284 16.644 2.57572L10.2169 9.00032L16.644 15.4249C16.7568 15.5378 16.8464 15.6718 16.9075 15.8193C16.9686 15.9668 17 16.1248 17 16.2844C17 16.4441 16.9686 16.6021 16.9075 16.7496C16.8464 16.8971 16.7568 17.0311 16.644 17.144C16.5311 17.2568 16.3971 17.3464 16.2496 17.4075C16.1021 17.4686 15.9441 17.5 15.7844 17.5C15.6248 17.5 15.4668 17.4686 15.3193 17.4075C15.1718 17.3464 15.0378 17.2568 14.9249 17.144L8.50032 10.7169L2.07572 17.144C1.96284 17.2568 1.82884 17.3464 1.68136 17.4075C1.53389 17.4686 1.37582 17.5 1.21619 17.5C1.05656 17.5 0.898496 17.4686 0.751018 17.4075C0.60354 17.3464 0.469538 17.2568 0.356664 17.144C0.243789 17.0311 0.154252 16.8971 0.0931643 16.7496C0.032077 16.6021 0.000635622 16.4441 0.000635622 16.2844C0.000635622 16.1248 0.032077 15.9668 0.0931643 15.8193C0.154252 15.6718 0.243789 15.5378 0.356664 15.4249L6.78369 9.00032L0.356664 2.57572C0.243606 2.46295 0.153907 2.32898 0.0927047 2.18149C0.0315023 2.03399 0 1.87588 0 1.71619C0 1.55651 0.0315023 1.39839 0.0927047 1.2509C0.153907 1.1034 0.243606 0.969436 0.356664 0.856664Z' fill='%23888888'/%3E%3C/svg%3E");
+	      font-size: 0;
+	    }
+	}
+	
+	// alertPop
+	&.is-confirm {
+	  // display: none;
+	  position: fixed;
+	  left: 50%;
+	  top: 50%;
+	  z-index: 9999;
+	  width: 50rem;
+	  min-height: auto;
+	  padding: 63rem 20rem 29rem;
+	  background: $white;
+	  border-radius: 8rem;
+	  transform: translate(-50%, -50%);
+	  text-align: center;
+	  .ui-dialog-content {
+		margin: 0;
+		padding: 0;
+	    font-weight: $font-weight-regular;
+	    font-size: 15rem;
+	    line-height: 24rem;
+	    text-align: center;
+	    color: $gray-default;
+	    
+	  }
+	  .ui-widget-header{
+		display:none;
+	  }
+	  .ui-dialog-buttonpane{
+	    position: relative;
+	    display: block;
+	    height: auto;
+	    margin-top: 45rem;
+	    border: none;
+	  }
+	}
+	
+	.table-title{
+		.icon {
+			display: none;
+		}
+	}
+	
+	.group{
+	  border: none;
+	  .wrap{
+		padding: 0 10px;
+	    .h6{
+			margin-bottom: 20rem;
+			padding: 0;
+			font-size: 20rem;
+			font-weight: 700;
+			line-height: 30rem;		
+		}
+	  }
+	  .scroll{
+		padding: 0;
+	  }
+	}
+  }
+  .ui-dialog-content{
+    overflow-y: auto;
+    max-height: calc(100vh - 285rem) !important;
+    height:auto !important;
+    margin: 110rem 0 93rem;
+    padding: 0 0rem 0rem;
+    font-weight: $font-weight-regular;
+    font-size: 16rem;
+    line-height: 24rem;
+    color: $gray-default;
+    .has-table-title{
+	  display: flex;
+	  justify-content: space-between;
+	  +.realgrid{
+		margin-top: 20rem;
+	  }
+	}
+	.searchWrap{
+		margin-bottom: 20rem;
+	}
+    .table{
+		&.is-search{
+	      &.is-popup{
+	        border:0;
+	        background-color: #F9F9F9;
+	        padding: 1.3rem 3rem;
+	        .formSearch__content{
+	          .formSearch__item{
+	            margin-bottom: 0;
+	            .formSearch__title{
+	              flex-basis: 10rem;
+	              width: 10rem;
+	              .label{
+	                font-weight: $font-weight-regular;
+	              }
+	            }
+	          }
+	          &.is-col3{
+	            .formSearch__item{
+	              width: calc(33.333% - 5.5rem);
+	            }
+	          }
+	          &.is-col1{
+	            .formSearch__item{
+	              width: calc(100% - 5.5rem);
+	            }
+	          }
+	        }
+	      }
+	      &.is-col1{
+	        .formSearch__item{
+	          width: calc(100% - 5.5rem);
+	          .formSearch__form{
+	            display: flex;
+	            justify-content: space-between;
+	          }
+	        }
+	      }
+	    }
+	}
+    .formSearch__item{
+      width: calc(50% - 5.5rem);
+    }
+    .formSearch__btn{
+      top: 2rem;
+      right: 3rem;
+    }
+	.card {
+		border: none;
+	}
+  }
+ .ui-dialog-buttonpane {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:999;
+    width: 100%;
+    height: 93rem;
+    padding: 20rem 40rem;
+    border-top: 1px solid #EAEAEA;
+ }
+ 
+ .rg-rowbarcontainer {
+	.rg-statebar-created{
+	  background-repeat: no-repeat;
+  	  background-position: center center;
+	}
+  }
+  .rg-renderer{
+	// max-height: auto !important;
+
+	.text-content {
+		&:empty {
+			& + .is-new-window {
+				padding: 0;
+				float: inherit !important;
+			} 
+		}
+	}
+  }
+}
+.modalPopup__mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: $black;
+  opacity: 0.5;
+}
+

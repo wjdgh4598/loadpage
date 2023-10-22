@@ -1,0 +1,22 @@
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60rem;
+}
+
+.inner-card-title {
+    margin-bottom: 8rem;
+    font-size: 13rem;
+    font-weight: 400;
+    line-height: 16rem;
+    color: #666;
+}
+
+.inner-card-description {
+    font-size: 18rem;
+    font-weight: 600;
+    line-height: 21rem;
+    color: #5b5b5b;
+}

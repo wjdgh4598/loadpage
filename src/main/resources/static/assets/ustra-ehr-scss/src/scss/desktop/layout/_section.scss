@@ -1,0 +1,13 @@
+.section {
+    padding: 30rem 15rem;
+
+    @include from-desktop {
+        &.is-medium {
+            padding: 90rem 15rem;
+        }
+
+        &.is-large {
+            padding: 180rem 15rem;
+        }
+    }
+}

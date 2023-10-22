@@ -1,0 +1,30 @@
+.school-list {
+    counter-reset: list;
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14rem;
+        font-weight: 500;
+        color: #151515;
+
+        &::before {
+            counter-increment: list;
+            content: counter(list);
+            margin-right: 13rem;
+        }
+    }
+}
+
+.school-name {
+    margin-right: 30rem;
+}
+
+.school-percentage {
+    border-radius: 3rem;
+    padding: 4rem 10rem;
+    background-color: #f8f1f1;
+    font-size: 13rem;
+    line-height: 16rem;
+    color: #d40000;
+}

@@ -1,0 +1,10 @@
+.textarea {
+    @include input;
+    display: block;
+    padding: 10rem;
+    resize: none;
+
+    &.is-error {
+        background-position: calc(100% - 5rem) calc(100% - 5rem);
+    }
+}

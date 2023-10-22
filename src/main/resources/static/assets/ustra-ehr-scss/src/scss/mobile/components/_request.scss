@@ -1,0 +1,57 @@
+/* Blocks */
+.request {
+    border-bottom: 1rem solid #f1f1f1;
+    padding: 19rem 0 20rem;
+
+    .columns {
+        &:not(:last-child) {
+            margin-bottom: 19rem;
+        }
+    }
+
+    &.has-button {
+        background-image: url(../background-images/svg/chevron-right.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% + 5rem) 20rem;
+        background-size: 16rem;
+    }
+}
+
+/* Elements */
+.request-title {
+    width: 30%;
+    font-size: 14rem;
+    font-weight: 600;
+    line-height: 17rem;
+}
+
+.request-detail {
+    width: 31%;
+}
+
+.request-description {
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 17rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.request-date {
+    font-size: 13rem;
+    line-height: 16rem;
+    color: #afafaf;
+}
+
+.requestor {
+    width: 39%;
+    padding-right: 25rem;
+    overflow: hidden;
+    text-align: right;
+    font-size: 13rem;
+    line-height: 16rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

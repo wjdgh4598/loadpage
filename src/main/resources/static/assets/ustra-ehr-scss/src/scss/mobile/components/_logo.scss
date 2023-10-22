@@ -1,0 +1,40 @@
+.logo {
+    display: flex;
+    
+    &.is-gsitm-hr {
+        fill: white;
+
+        svg {
+            width: 165.44rem;
+            height: 35rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 46rem;
+        }
+
+        &.is-large {
+            svg {
+                width: 233rem;
+                height: 50rem;
+            }
+        }
+    }
+}
+
+@include to-mobile {
+    .logo {
+        &.is-gsitm-hr {
+            &:not(:last-child) {
+                margin-bottom: 30rem;
+            }
+            
+            &.is-large {
+                svg {
+                    width: 168rem;
+                    height: 36rem;
+                }
+            }
+        }
+    }
+}

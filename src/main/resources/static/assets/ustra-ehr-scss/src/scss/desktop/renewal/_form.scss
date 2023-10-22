@@ -1,0 +1,352 @@
+
+//form search
+.searchWrap {
+  position: relative;
+  // padding: 30rem 190rem 20rem 55rem;
+  padding-top: 26rem;
+  padding-bottom: 11rem;
+  background: $white;
+  // border: 1px solid #EFA54E;
+  // border-radius: 8rem;
+  border-radius: 13rem;
+  .table.is-search {
+    // margin: 0 -25rem;
+    &:after {
+      display: block;
+      visibility: hidden;
+      content: "";
+      clear: both;
+      overflow: hidden;
+    }
+    >thead{
+		tr{
+			th,td{
+				padding-bottom: 15rem;
+			}
+		}
+	}
+	> tbody{
+		tr{
+			th,td{
+				padding-bottom: 15rem;
+			}
+		}
+	}
+    .formSearch__item {
+      display: flex;
+      float: left;
+      width: calc(33.33% - 5.5rem);
+      margin: 0 2.75rem 1.5rem;
+      .formSearch__title {
+        align-items: center;
+        display: flex;
+        width: 13rem;
+        flex-basis: 13rem;
+        .label{
+        font-weight: $font-weight-semi-bold;
+        font-size: 1.4rem;
+        line-height: 17px;
+        color: $gray-default;
+        }
+      }
+      .formSearch__form {
+        flex-grow: 1;
+        flex-basis: 12rem;
+        .checkBox{
+          min-height: 3.8rem;
+        }
+      }
+    }
+    tr:first-child > th,
+    tr:first-child > td{
+		padding-top: 4rem !important;	
+ 	}
+  }   
+  .formSearch__btn {
+    position: absolute;
+    right: 28rem !important;
+    top: 30rem !important;
+    .is-iconBtn2{
+      min-width: 7.792rem;
+    }
+    .is-del{
+		width: 15rem;
+	    height: 15rem;
+	    padding-right: 5px;
+	}
+  }
+}
+@media (max-width: 1919px) {
+  .formSearch {
+    padding-right: 14.5rem;
+    padding-left: 3rem;
+    .formSearch__content{
+      .formSearch__item {
+          width: calc(50% - 5.5rem);
+      }
+    }
+    .formSearch__btn{
+      right: 3rem;
+    }
+  }
+}
+
+
+
+//form detail
+.form{
+  .is-right{
+	text-align: right;	
+	.buttons{
+		justify-content: end;
+	}
+	+ .table{
+		margin-top: 10rem;
+	}
+  }
+  .formDetail__title{
+    display: block;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    color: $black;
+  }
+    .table {
+    width: 100%;
+    border-top: 2rem solid $gray-default;
+    text-align: left;
+  
+    & > thead > tr > th,
+    & > thead > tr > td,
+    & > tbody > tr > th,
+    & > tbody > tr > td {
+      border-bottom: 1rem solid $gray-line;
+    }
+  
+    & > thead > tr > th,
+    & > tbody > tr > th {
+      padding: 19rem 30rem;
+      background: #F9F9F9;
+      font-weight: $font-weight-semi-bold;
+      border-right: 1rem solid $gray-line;
+    }
+  
+    & > thead > tr > td,
+    & > tbody > tr > td {
+      padding: 10rem;
+      font-size: 14px;
+      line-height: 17px;
+      color: $gray-default;
+      border-right: 1rem solid $gray-line;
+      .table{
+		&.is-striped-vertically
+		{
+			> tbody{
+				> tr{
+					td{
+						border-bottom: 0;
+					}
+				}
+			}
+	    }
+    	}
+    }
+    .radioBox{
+      min-height: 36rem;
+      margin-left: 20rem;
+    }
+    .control {
+		width: 100% !important;
+		
+		.input{
+			+ .input{
+				margin-left: 3rem;
+			}
+		}
+	}
+	.file-upload{
+		.file{
+			margin-bottom: 10px;
+		}
+	}
+  }   
+}
+
+.table {
+	+.table {
+		margin-top: 30rem;
+	}
+	.is-striped-vertically{
+		border-top: 1px solid $gray-line !important;
+		
+		.file-upload{
+			.file{
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	&.is-striped-vertically{
+		width: 100%;
+	    border-top: 2rem solid $gray-default;
+	    text-align: left;
+	    border-bottom: 0;
+	  
+	    & > thead > tr > th,
+	    & > thead > tr > td,
+	    & > tbody > tr > th,
+	    & > tbody > tr > td {
+	      border-bottom: 1rem solid $gray-line;
+	    }
+	  
+	    & > thead > tr > th,
+	    & > tbody > tr > th {
+	      padding: 19rem 30rem;
+	      background: #F9F9F9;
+	      font-weight: $font-weight-semi-bold;
+	      border-right: 1rem solid $gray-line;
+	    }
+	  
+	    & > thead > tr > td,
+	    & > tbody > tr > td {
+	      padding: 10rem;
+	      font-size: 14px;
+	      line-height: 17px;
+	      color: $gray-default;
+	      border-right: 1rem solid $gray-line;
+	    }
+	    .radioBox{
+	      min-height: 36rem;
+	      margin-left: 20rem;
+	    }
+	    .control {
+			width: 100% !important;
+			
+			.input{
+				+ .input{
+					margin-left: 3rem;
+				}
+			}
+		}	
+		.is-striped-vertically{
+			border-top: 1px solid $gray-line;
+			
+			.file-upload{
+				.file{
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+   
+}  
+
+.fileUploadBox {
+  width:100%;
+  border: 1rem solid $gray-light;
+  border-radius: 3rem;
+}
+
+//fileUpload
+.fileUpload {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .formControl{
+    width:calc(100% - 70rem);
+  }
+  .fileUpload__fileName {
+    flex-grow: 1;
+    border: 1px solid #f0f0f0;
+    border-radius: 4rem;
+    color: #373737;
+    font-size: 14rem;
+    height: 38rem;
+    line-height: 38rem;
+    outline: none;
+    padding: 0 10rem;
+    width: 100%;
+    pointer-events: none;
+
+    &::placeholder {
+      color: $gray-light;
+    }
+    &.is-error {
+      border-color: $error;
+    }
+    fieldset[disabled] &,
+    &[disabled],
+    &.is-disabled {
+      background: $primary;
+      border-color: $gray-line;
+      color: $gray-light;
+      pointer-events: none;
+    }
+    &[readonly]+.formControl__clear {
+      display:block;
+      opacity: 1;
+    }
+  }
+  .formControl__clear {
+    opacity: 1;
+  }
+  .fileUpload__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .fileUpload__labelBtn {
+      margin-left: 10rem;
+    cursor: pointer;
+    vertical-align: middle;
+  }
+}
+
+.formTable{
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2rem solid #373737;
+  .formTable__item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    border-bottom: 1rem solid #f0f0f0;
+    border-right: 1rem solid #f0f0f0;
+    &:nth-child(2n){
+      border-right: 0;
+    }
+    &.is-width100{
+      width: 100%;
+    }
+    .formTable__title{
+      width: 190rem;
+      background: #f9f9f9;
+      padding: 19rem 3rem;
+      border-bottom: 1rem solid #f0f0f0;
+      border-right: 1rem solid #f0f0f0;
+      font-weight: $font-weight-semi-bold;
+    }
+    .formTable__form{
+      display: flex;
+      align-items: center;
+      width: calc(100% - 190rem);
+      color: #373737;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 10rem;
+      .formSelect{
+        min-width: 20rem;
+      }
+    }
+  }
+}
+
+@media (max-width:1280px){
+  .formTable{
+    .formTable__item{
+      width: 100%;
+      border-right: 0;
+    }
+  } 
+}

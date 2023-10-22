@@ -1,0 +1,41 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .box {
+        justify-content: center;
+        align-items: center;
+        border: 1rem solid #e5e5e5;
+        width: 614rem;
+        height: 487rem;
+    }
+
+    .icon {
+        &.is-error {
+            margin-bottom: 40rem;
+        }
+    }
+}
+
+.error-message {
+    font-size: 20rem;
+    font-weight: 500;
+
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    &.is-c01e14 {
+        color: #c01e14;
+    }
+}
+
+.icon {
+    &.is-error {
+        width: 200rem;
+        height: 153rem;
+    }
+}

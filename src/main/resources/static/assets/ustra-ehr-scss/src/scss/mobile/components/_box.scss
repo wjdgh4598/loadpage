@@ -1,0 +1,15 @@
+.box {
+    @include block;
+    display: flex;
+    flex-direction: column;
+    background-color: $scheme-main;
+
+    &.has-border {
+        border: 1rem solid #e5e5e5;
+        padding: 30rem;
+    }
+
+    &.is-half {
+        width: 50%;
+    }
+}

@@ -1,0 +1,66 @@
+.tooltip {
+    display: none;
+    font-size: 12rem;
+    font-weight: 400;
+}
+
+.button,
+.checkbox {
+    &:hover,
+    &.is-hover {
+        .tooltip {
+            display: block;
+            position: absolute;
+            top: 38rem;
+            left: 50%;
+            z-index: 10;
+            transform: translateX(-50%);
+            border: 1rem solid #707070;
+            padding: 4rem;
+            width: 56rem;
+            background-color: white;
+            color: #151515;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4rem;
+                left: 50%;
+                border-top: 1rem solid #707070;
+                border-left: 1rem solid #707070;
+                width: 6rem;
+                height: 6rem;
+                background-color: white;
+                transform: translateX(-50%) rotate(45deg);
+            }
+
+            .buttons {
+                display: none;
+
+                &.has-button {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.is-status-information {
+        &:hover,
+        &.is-hover {
+            .tooltip {
+                padding: 15rem 14rem;
+                width: 256rem;
+            }
+        }
+    }
+
+    &.is-user-user {
+        &:hover,
+        &.is-hover {
+            .tooltip {
+                padding: 2rem 0;
+                white-space: pre;
+            }
+        }
+    }
+}

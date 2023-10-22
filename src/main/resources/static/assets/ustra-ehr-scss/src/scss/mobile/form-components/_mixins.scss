@@ -1,0 +1,119 @@
+@mixin input {
+    border: 1rem solid #dbdbdb;
+    border-radius: 3rem;
+    width: 100%;
+
+    &.is-error {
+        border-color: #c01e14 !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='%23c01e14'%3E%3Cpath d='M-2214,2831a13.908,13.908,0,0,1-9.9-4.1,13.908,13.908,0,0,1-4.1-9.9,13.909,13.909,0,0,1,4.1-9.9,13.907,13.907,0,0,1,9.9-4.1,13.933,13.933,0,0,1,5.358,1.066,13.934,13.934,0,0,1,4.541,3.036,13.934,13.934,0,0,1,3.036,4.541A13.933,13.933,0,0,1-2200,2817a13.907,13.907,0,0,1-4.1,9.9A13.909,13.909,0,0,1-2214,2831Zm0-9.146a1.512,1.512,0,0,0-1.495,1.593A1.475,1.475,0,0,0-2214,2825a1.492,1.492,0,0,0,1.5-1.553A1.513,1.513,0,0,0-2214,2821.854Zm-1.2-12.854.4,11h1.6l.4-11Z' transform='translate(2230 -2801)' stroke='rgba(0,0,0,0)' stroke-miterlimit='10' stroke-width='1'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 5rem);
+        background-size: 13rem;
+        color: #c01e14;
+    }
+
+    &.is-ghost {
+        border: none;
+        background-color: transparent !important;
+    }
+
+    &.is-highlight {
+        font-weight: 700;
+        text-decoration: underline;
+        color: #c01e14;
+    }
+
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus,
+    &.is-active {
+        &:not([readonly]) {
+            &:not([disabled]) {
+                border-color: #6e6e6e;
+            }
+        }
+    }
+
+    &[readonly],
+    fieldset[disabled] &,
+    &[disabled] {
+        background-color: #f8f8f8;
+    }
+    
+    fieldset[disabled] &,
+    &[disabled] {
+        color: #bebebe;
+    }
+}
+
+@mixin check-radio {
+    input {
+        @include sr-only;
+
+        &:checked {
+            ~ .input-button {
+                border-color: #151515;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                }
+            }
+        }
+
+        &[readonly] {
+            border-color: #666;
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            ~ span {
+                color: #dbdbdb;
+                cursor: not-allowed;
+            }
+
+            ~ .input-button {
+                border-color: #dbdbdb;
+            }
+
+            &:not(:checked) {
+                ~ .input-button {
+                    background-color: #ededed;
+                }
+            }
+        }
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        user-select: none;
+    }
+
+    .input-button {
+        position: relative;
+        border: 1rem solid #bebebe;
+        width: 16rem;
+        height: 16rem;
+        background-color: white;
+
+        &:focus,
+        &.is-focus,
+        &.is-active {
+            border-color: #151515;
+        }
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+
+    &:hover,
+    &.is-hover {
+        .input-button {
+            border-color: #151515;
+        }
+    }
+}

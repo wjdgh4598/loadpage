@@ -1,0 +1,15 @@
+.id-photo {
+    position: relative;
+
+    img {
+        display: block;
+    }
+
+    .checkbox {
+        &.is-setting {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

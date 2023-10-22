@@ -1,0 +1,48 @@
+.favorite {
+    margin-top: 14rem;
+
+    li {
+        padding: 8rem 30rem;
+
+        &:hover,
+        &.is-active {
+            dt {
+                font-weight: 700;
+                color: black;
+            }
+        }
+    }
+
+    .checkbox {
+        &.is-star {
+            &:not(:last-child) {
+                margin-right: 12rem;
+            }
+        }
+    }
+
+    dt {
+        font-size: 15rem;
+        font-weight: 500;
+        line-height: 18rem;
+        color: #666;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    dd {
+        font-size: 13rem;
+        line-height: 16rem;
+        color: #9a9a9a;
+    }
+
+    .columns {
+        align-items: center;
+    }
+}
+
+.favorite-item {
+    display: flex;
+}

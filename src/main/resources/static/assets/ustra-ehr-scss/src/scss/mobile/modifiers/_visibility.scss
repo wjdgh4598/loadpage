@@ -1,0 +1,181 @@
+$displays: "block" "flex" "inline" "inline-block" "inline-flex";
+
+@each $display in $displays {
+    @include to-mobile {
+        .is-#{$display}-mobile {
+            display: #{$display} !important;
+        }
+    }
+
+    @include to-tablet {
+        .is-#{$display}-tablet {
+            display: #{$display} !important;
+        }
+    }
+
+    @include tablet {
+        .is-#{$display}-tablet {
+            display: #{$display} !important;
+        }
+    }
+
+    @include from-tablet {
+        .is-#{$display}-tablet {
+            display: #{$display} !important;
+        }
+    }
+
+    @include desktop {
+        .is-#{$display}-desktop {
+            display: #{$display} !important;
+        }
+    }
+
+    @include from-desktop {
+        .is-#{$display}-desktop {
+            display: #{$display} !important;
+        }
+    }
+
+    @include widescreen {
+        .is-#{$display}-widescreen {
+            display: #{$display} !important;
+        }
+    }
+
+    @include from-widescreen {
+        .is-#{$display}-widescreen {
+            display: #{$display} !important;
+        }
+    }
+
+    @include from-fullhd {
+        .is-#{$display}-fullhd {
+            display: #{$display} !important;
+        }
+    }
+
+    .is-#{$display} {
+        display: #{$display} !important;
+    }
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.is-sr-only {
+    @include sr-only;
+}
+
+@include to-mobile {
+    .is-hidden-mobile {
+        display: none !important;
+    }
+}
+
+@include to-tablet {
+    .is-hidden-tablet {
+        display: none !important;
+    }
+}
+
+@include tablet {
+    .is-hidden-tablet {
+        display: none !important;
+    }
+}
+
+@include from-tablet {
+    .is-hidden-tablet {
+        display: none !important;
+    }
+}
+
+@include desktop {
+    .is-hidden-desktop {
+        display: none !important;
+    }
+}
+
+@include from-desktop {
+    .is-hidden-desktop {
+        display: none !important;
+    }
+}
+
+@include widescreen {
+    .is-hidden-widescreen {
+        display: none !important;
+    }
+}
+
+@include from-widescreen {
+    .is-hidden-widescreen {
+        display: none !important;
+    }
+}
+
+@include from-fullhd {
+    .is-hidden-fullhd {
+        display: none !important;
+    }
+}
+
+.is-invisible {
+    visibility: hidden !important;
+}
+
+@include to-mobile {
+    .is-invisible-mobile {
+        visibility: hidden !important;
+    }
+}
+
+@include to-tablet {
+    .is-invisible-tablet {
+        visibility: hidden !important;
+    }
+}
+
+@include tablet {
+    .is-invisible-tablet-only {
+        visibility: hidden !important;
+    }
+}
+
+@include from-tablet {
+    .is-invisible-tablet {
+        visibility: hidden !important;
+    }
+}
+
+@include desktop {
+    .is-invisible-desktop-only {
+        visibility: hidden !important;
+    }
+}
+
+@include from-desktop {
+    .is-invisible-desktop {
+        visibility: hidden !important;
+    }
+}
+
+@include widescreen {
+    .is-invisible-widescreen-only {
+        visibility: hidden !important;
+    }
+}
+
+@include from-widescreen {
+    .is-invisible-widescreen {
+        visibility: hidden !important;
+    }
+}
+
+@include from-fullhd {
+    .is-invisible-fullhd {
+        visibility: hidden !important;
+    }
+}

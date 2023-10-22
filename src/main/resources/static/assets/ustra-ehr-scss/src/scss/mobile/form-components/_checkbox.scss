@@ -1,0 +1,159 @@
+.checkbox {
+    @include check-radio;
+    position: relative;
+
+    input {
+        &:checked {
+            ~ .input-button {
+                background-color: #151515;
+
+                &::after {
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 8rem;
+                    height: 6rem;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.242' height='6.411' viewBox='0 0 8.242 6.411'%3E%3Cpath d='M391.378,239.421l2.538,2.538,4.29-4.29' transform='translate(-390.671 -236.962)' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                }
+            }
+
+            ~ .icon {
+            }
+        }
+
+        &:hover,
+        &.is-hover {
+            ~ .icon {
+                fill: black;
+            }
+        }
+
+        &:focus,
+        &.is-focus {
+            ~ .input-button {
+                border-color: #151515;
+            }
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            ~ .input-button {
+                background-color: #f1f1f1;
+            }
+
+            ~ .icon {
+                fill: #ededed;
+            }
+        }
+    }
+
+    .input-button {
+        border-radius: 2rem;
+    }
+
+    &.is-toggle {
+        display: flex;
+        align-items: center;
+        border-radius: 30rem;
+        background-color: #f1f1f1;
+
+        input:checked {
+            ~ .checkbox-text {
+                &:nth-child(2) {
+                    background-color: white;
+                    color: black;
+                    font-weight: 600;
+                }
+
+                &:last-child {
+                    background-color: transparent;
+                    color: #afafaf;
+                    font-weight: 400;
+                }
+            }
+        }
+        
+        .checkbox-text {
+            margin: 3rem;
+            border-radius: 30rem;
+            padding: 3rem 15rem;
+            font-size: 12rem;
+            font-weight: 600;
+            line-height: 15rem;
+
+            &:nth-child(2) {
+                color: #afafaf;
+                font-weight: 400;
+            }
+
+            &:last-child {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    &.is-on-off {
+        display: flex;
+        align-items: center;
+        border-radius: 30rem;
+        padding: 0 4rem;
+        height: 28rem;
+        background-color: #476c97;
+
+        input {
+            &:checked {
+                ~ .checkbox-text {
+                    &:nth-child(2) {
+                        &::after {
+                            background-color: white;
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .checkbox-text {
+            margin: 3rem;
+            padding: 3rem;    
+            font-size: 12rem;
+            line-height: 15rem;
+            color: white;
+        
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                width: 22rem;
+                height: 22rem;
+            }
+            
+            &:nth-child(2) {
+                &::after {
+                    left: 4rem;
+                    background-color: transparent;
+                }
+            }
+        
+            &:last-child {
+                &::after {
+                    right: 4rem;
+                    background-color: white;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 10rem;
+        }
+    }
+}

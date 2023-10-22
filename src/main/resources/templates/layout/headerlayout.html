@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="headerFragment">
+        <!-- [ Header ] start -->
+        <header class="header">
+        	<ul class="header__navi">
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">전자결재</a>
+			    </li>
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">eHR(인사)</a>
+			    </li>
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">법무시스템</a>
+			    </li>
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">스마일큐(Helpdesk)</a>
+			    </li>
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">스마일허브</a>
+			    </li>
+			    <li class="navi__item">
+			    	<a class="navi__link" href="#">eHR인사</a>
+			    </li>
+			    <li class="navi__item">
+			    	<!-- 겸직리스트 -->
+			    	<select id="select_multiJob"></select>
+			    </li>
+			    <li class="navi__item">
+			    	<th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') == 'local' or @environment.getProperty('spring.config.activate.on-profile') == 'dev1' or @environment.getProperty('spring.config.activate.on-profile') == 'dev2'}">
+			    	    <a class="navi__link" href="/logout">로그아웃</a>
+			    	    <!--
+                        <a class="navbar-link" href="/logout" aria-current="page" rel="noopener">
+                            <span class="icon is-logout is-medium">
+                                <svg>
+                                    <use href="#logout"></use>
+                                </svg>
+                            </span>
+                            <span>로그아웃</span>
+                        </a>
+                        -->
+                    </th:block>
+                    <th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') == 'develop' or @environment.getProperty('spring.config.activate.on-profile') == 'prod'}">
+                        <a class="navbar-link" href="/logout" aria-current="page" rel="noopener">
+                            <span class="icon is-logout is-medium">
+                                <svg>
+                                    <use href="#logout"></use>
+                                </svg>
+                            </span>
+                            <span>포탈홈</span>
+                        </a>
+                    </th:block>
+			    </li>
+			</ul>
+			<div class="header__menu">
+				<nav class="gnb">
+					<a href="#" onclick="return false;" class="gnbBtn">메뉴모음</a>
+					<div class="gnb__wrap">
+					    <a href="#" onclick="return false;" class="bookmark__btn">즐겨찾기</a>
+						<div class="bookmark">
+				            <div class="bookmark__wrap">
+						        <div class="bookmark__item">
+						            <strong>즐겨찾기</strong>
+						            <ul id="favoriteMenu">
+						                <!-- <li><a href="#"><em>프로젝트 코드 생성</em></a></li>
+						                <li><a href="#"><em>동호회비 정산</em></a></li>
+						                <li><a href="#"><em>계약별 정산항목 등록</em></a></li>
+						                <li><a href="#"><em>PS코드관리</em></a></li>
+						                <li><a href="#"><em>워크샵 정산</em></a></li> -->
+						            </ul>
+						        </div>
+						        <!-- <div class="bookmark__item">
+						            <strong>즐겨찾기 2</strong>
+						            <ul>
+						                <li><a href="#"><em>개인별 법인카드 사용내역</em></a></li>
+						                <li><a href="#"><em>야근택시 정산</em></a></li>
+						                <li><a href="#"><em>동호회비 정산</em></a></li>
+						                <li><a href="#"><em>카카오택시 정산</em></a></li>
+						            </ul>
+						        </div>
+						        <div class="bookmark__item">
+						            <strong>즐겨찾기 3</strong>
+						            <ul>
+						              <li><a href="#"><em>공통코드관리</em></a></li>
+						              <li><a href="#"><em>인사관리</em></a></li>
+						              <li><a href="#"><em>자산결재 현황</em></a></li>
+						            </ul>
+						        </div> -->
+						    </div>
+						</div>
+						<ul class="gnb__list" id="headerMenu">
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">components</a></div>
+						        <div class="gnb__2depthWrap">
+						            <ul class="gnb__2depth">
+						                <li><a href="#">typography</a></li>
+						                <li><a href="#">color</a></li>
+						                <li><a href="#">Button / Pagenation</a></li>
+						                <li><a href="#">menu</a></li>
+						                <li><a href="#">input</a></li>
+						                <li><a href="#">Elements</a></li>
+						                <li><a href="#">Grid</a></li>
+						                <li><a href="#">Form</a></li>
+						                <li><a href="#">Title</a></li>
+						                <li><a href="#">popup</a></li>
+						                <li><a href="#">Treeview</a></li>
+						            </ul>
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">기준정보</a></div>
+						        <div class="gnb__2depthWrap">
+						            <ul class="gnb__2depth">
+						                <li>
+						                    <a href="#">거래처 관리</a>
+						                </li>
+						                <li>
+						                    <a href="#">WBS 관리</a> 
+						                </li>
+						                <li>
+						                    <a href="#">계정 관리</a> 
+						                </li>
+						                <li>
+						                    <a href="#">내부오더 관리</a>
+						                </li>
+						                <li>
+						                    <a href="#">투입율</a>
+						                </li>
+						                <li>
+						                    <a href="#">별도예산관리</a>
+						                    <ul class="gnb__3depth">  
+						                        <li><a href="#">별도예산생성</a></li>
+						                        <li><a href="#">별도예산변경</a></li>
+						                    </ul>  
+						                </li>
+						            </ul>
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">예산</a></div>
+						        <div class="gnb__2depthWrap">
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">매입정산</a></div>
+						        <div class="gnb__2depthWrap">
+						            <ul class="gnb__2depth">
+						                <li>
+						                    <a href="#">비용기안관리</a>
+						                    <ul class="gnb__3depth">
+						                        <li><a href="#">기안서</a></li>
+						                        <li><a href="#">마일스톤1단계</a></li>
+						                        <li><a href="#">마일스톤2단계</a></li>
+						                        <li><a href="#">마일스톤3단계</a></li>
+						                        <li><a href="#">마일스톤4단계</a></li>
+						                        <li><a href="#">마일스톤관리</a></li>
+						                        <li><a href="#">송금요청서</a></li>
+						                    </ul>
+						                </li>
+						                <li>
+						                    <a href="#">일반비정산</a>
+						                    <ul class="gnb__3depth">
+						                        <li><a href="#">지출결의서(현금)</a></li>
+						                        <li><a href="#">워크샵정산</a></li>
+						                    </ul>
+						                </li>
+						                <li>
+						                    <a href="#">법인카드</a>
+						                    <ul class="gnb__3depth">
+						                        <li><a href="#">법인카드신청</a></li>
+						                        <li><a href="#">법인카드 권한관리</a></li>
+						                        <li><a href="#">법인카드 사용내역</a></li>
+						                    </ul>
+						                </li>
+						                <li>
+						                    <a href="#">모든페이지 팝업</a>
+						                    <ul class="gnb__3depth">
+						                        <li><a href="#">팝업</a></li>
+						                    </ul>
+						                </li>
+						            </ul>
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">매출</a></div>
+						        <div class="gnb__2depthWrap">
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						        <div class="gnb__linkWrap"><a class="gnb__link" href="#">예산</a></div>
+						        <div class="gnb__2depthWrap">
+						        </div>
+						    </li>
+						    <li class="gnb__item">
+						       <div class="gnb__linkWrap"><a class="gnb__link" href="#">마이페이지</a></div>
+						    </li>
+						</ul>
+					</div>
+				</nav>
+				<div class="logo">
+					<a class="logo__link" href="/"></a>
+			    </div>
+			    <div class="gnb__search formControl">
+			        <input type="text" placeholder="메뉴명 검색" class="formControl__search is-searchLine">
+			        <button class="formControl__searchBtn">검색</button>
+			    </div>
+			</div>
+			<div class="gnb__bg"></div>
+        </header>
+        
+        <nav class="navbar" role="navigation" aria-label="main navigation" style="display: none;">
+            <div class="navbar-logo">
+                <a class="navbar-link" href="/" rel="noopener">
+                    <!-- <img th:src="@{${'/assets/images/png/logo_main_' + coId + '.png'}}" alt="eHR" class="icon is-logo is-medium" onError="this.onerror=null; this.src='/assets/images/png/logo_main_hr.png'" /> -->
+                    <!-- <span class="logo is-gsitm-hr is-medium"> -->
+                        <img src="../../assets/images/jpg/logo-ustra-hr.jpg" alt="Smilegate Holdings SAM">
+                    <!-- </span> -->
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <ul class="navbar-left" id="headerMenu">
+                </ul>
+                
+                <!--
+	                <ul class="navbar-right">
+	                    <li class="navbar-item">
+	                        <a class="navbar-link" id="btnsiteMap" href="#!" aria-current="page" rel="noopener">
+	                            <span class="icon is-location is-medium">
+	                                <svg><use href="#location"></use></svg>
+	                            </span>
+	                            <span>사이트맵</span>
+	                        </a>
+	                    </li>
+	                    <li class="navbar-item">
+	                        <th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') == 'local' or @environment.getProperty('spring.config.activate.on-profile') == 'dev1' or @environment.getProperty('spring.config.activate.on-profile') == 'dev2'}">
+	                            <a class="navbar-link" href="/logout" aria-current="page" rel="noopener">
+	                                <span class="icon is-logout is-medium">
+	                                    <svg>
+	                                        <use href="#logout"></use>
+	                                    </svg>
+	                                </span>
+	                                <span>로그아웃</span>
+	                            </a>
+	                        </th:block>
+	                        <th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') == 'develop' or @environment.getProperty('spring.config.activate.on-profile') == 'prod'}">
+	                            <a class="navbar-link" href="/logout" aria-current="page" rel="noopener">
+	                                <span class="icon is-logout is-medium">
+	                                    <svg>
+	                                        <use href="#logout"></use>
+	                                    </svg>
+	                                </span>
+	                                <span>포탈홈</span>
+	                            </a>
+	                        </th:block>
+	                    </li>
+	                </ul>
+                -->
+            </div>
+        </nav>
+        <!-- [ Header ] end -->
+    </th:block>
+    <!-- <script src="/assets/js/frameMdiTabAdd.js"></script>
+    <script type="application/javascript">
+    Ustra.docReady(function() {
+    	_setFavoriteMenu();
+    	
+    	function _setFavoriteMenu() {
+            const favMenu = document.getElementById('bookmarkMenu');
+            const template = _.template('<div class = "bookmark__item">' 
+            	+ '<ul>'
+            	+ '<li>'
+                + '<a href="#!">'
+                + '<em>'
+                + '<dt>{{pgmNm}}</dt>'
+                + '</em>'
+                + '</a>'
+                + '</li>'
+                + '</ul>'
+                + '</div>'
+                );
+
+            favMenu.innerHTML = '';
+            Ustra.get('/api/favorites', {}, function (data) {
+                if (_.isArray(data)) {
+                    data.forEach(function (item) {
+                        item.breadcrumb = [item.favUprMenuNm, item.menuNm, item.pgmNm].join('>');
+                        item.pathname = item.pgmUrlAd;
+                        item.uprMenuId = item.favUprMenuId;
+                        item.favPgmAt = 'Y';
+                        item.data = getDataAttribute(item);
+                        var htmlTxt = template(item);
+
+                        var fav = document.createElement('template');
+                        fav.innerHTML = htmlTxt;
+                        fav = Ustra._getChildNodes(fav)[0];
+                        favMenu.appendChild(fav);
+                    });
+                }
+            });
+        }
+    });
+    </script> -->
+</html>

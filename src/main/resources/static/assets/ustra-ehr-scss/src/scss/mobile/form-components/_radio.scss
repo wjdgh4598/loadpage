@@ -1,0 +1,23 @@
+.radio {
+    @include check-radio;
+
+    .table:not(.is-search) & {
+        margin-left: 3rem;
+    }
+
+    &:not(:last-child) {
+        margin-right: 18rem;
+    }
+
+    input {
+        &:checked {
+            ~ .input-button {
+                border-width: 4rem;
+            }
+        }
+    }
+
+    .input-button {
+        border-radius: 50%;
+    }
+}

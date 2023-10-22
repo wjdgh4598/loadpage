@@ -1,0 +1,21 @@
+// Flex
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+.justify-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+// Text
+.text-center {
+    text-align: center;
+}
+.text-end {
+    text-align: right;
+}

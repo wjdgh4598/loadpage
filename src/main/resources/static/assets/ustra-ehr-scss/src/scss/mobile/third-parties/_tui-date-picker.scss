@@ -1,0 +1,182 @@
+.tui-datepicker-input {
+    border: none;
+    min-width: 100rem;
+    width: 100%;
+    height: 26rem;
+    vertical-align: middle;
+
+    input {
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            + .tui-ico-date {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath id='ic_event_24rem' d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%23151515'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        &[disabled] {
+            border-color: #dbdbdb;
+            color: #bebebe;
+            background-color: #ebebeb;
+
+            + .tui-ico-date {
+                opacity: 0.4;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%238e8e8e'/%3E%3C/svg%3E");
+            }
+        }
+
+        &:read-only {
+            border-color: #dbdbdb;
+            color: #151515;
+            background-color: #ededed;
+
+            + .tui-ico-date {
+                opacity: 0.4;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%238e8e8e'/%3E%3C/svg%3E");
+            }
+        }
+    }
+
+    .tui-ico-date {
+        top: calc(50% - 1rem);
+        transform: translateY(-50%);
+        margin: 0;
+        width: 14rem;
+        height: 16rem;
+        pointer-events: none;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%238e8e8e'/%3E%3C/svg%3E")
+            no-repeat;
+        background-position: 0 0 !important;
+    }
+
+    &:hover {
+        .tui-ico-date {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath id='ic_event_24rem' d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%23151515'/%3E%3C/svg%3E%0A");
+        }
+    }
+}
+
+.tui-datepicker {
+    z-index: 20;
+    position: fixed;
+    border-color: #585858;
+
+    .is-left & {
+        transform: translate(-100%, -65%);
+    }
+
+    .is-top & {
+        transform: translate(-59%, -109%);
+    }
+
+    td {
+        height: 40rem !important;
+        border-radius: 3rem;
+        border: 0 !important;
+        font-weight: bold;
+        font-size: 14rem;
+
+        &:hover {
+            background-color: #f0f3f9 !important;
+        }
+
+        &.tui-calendar-sat {
+            color: #4484d9;
+        }
+
+        &.tui-calendar-sun {
+            color: #c01e14;
+        }
+
+        &.tui-calendar-today {
+            color: #151515;
+            background-color: #f7f8f9 !important;
+        }
+
+        &.tui-is-selected {
+            color: #fff;
+            background-color: #151515 !important;
+        }
+
+        &.tui-calendar-next-month {
+            display: none;
+        }
+    }
+
+    .tui-is-selectable {
+        color: #000;
+
+        // &:hover {
+        //   background-color: #f7f8f9;
+        // }
+    }
+
+    .tui-is-blocked {
+        color: #999;
+    }
+
+    .tui-calendar-header {
+        border-bottom: 0;
+    }
+
+    .tui-calendar-header-inner {
+        height: auto;
+        padding: 12rem 0 17rem;
+    }
+
+    .tui-calendar-title {
+        font-weight: bold;
+        font-size: 16rem;
+        color: #151515;
+    }
+
+    .tui-calendar-btn {
+        top: 7rem;
+        width: 28rem !important;
+        height: 28rem;
+
+        &::after {
+            width: 5rem !important;
+            height: 9rem !important;
+        }
+    }
+
+    .tui-calendar-btn {
+        &:first-child {
+            left: 14rem;
+
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.268' height='9.121' viewBox='0 0 5.268 9.121'%3E%3Cpath id='패스_5' data-name='패스 5' d='M945.942,133.07l4.207,4.207-4.207,4.207' transform='translate(950.856 141.837) rotate(180)' fill='none' stroke='%238e8e8e' stroke-width='1'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        &:last-child {
+            right: 14rem;
+
+            &::after {
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.268' height='9.121' viewBox='0 0 5.268 9.121'%3E%3Cpath id='패스_5' data-name='패스 5' d='M945.942,133.07l4.207,4.207-4.207,4.207' transform='translate(-945.588 -132.716)' fill='none' stroke='%238e8e8e' stroke-width='1'/%3E%3C/svg%3E%0A")
+                    0 0;
+            }
+        }
+    }
+
+    .tui-calendar-body-header th {
+        height: 32rem;
+        font-size: 12rem;
+        color: #151515;
+
+        &.tui-sat {
+            color: #4484d9;
+        }
+
+        &.tui-sun {
+            color: #c01e14;
+        }
+    }
+}
+
+.tilde {
+    // margin: 0 2rem;
+    margin-right: 3rem;
+}

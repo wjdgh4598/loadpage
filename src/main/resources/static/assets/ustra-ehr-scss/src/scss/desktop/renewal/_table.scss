@@ -1,0 +1,75 @@
+.table{
+  width: 100%;
+  table-layout: fixed;
+  border-top: 2px solid $gray-default;
+  text-align: center;
+  th,td{
+    padding: 1.3rem 1rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    border-bottom: 1px solid $gray-line;
+    &:not(:last-child){
+      border-right: 1px solid $gray-line;
+    }
+    @each $color, $value in $theme-colors {
+      &.is-bg#{$color} {
+        background-color: $value !important;
+      }
+    }
+    @each $color, $value in $grays-colors {
+      &.is-bg#{$color} {
+        background-color: $value !important;
+      }
+    }
+  }
+  thead,tfoot{
+    th{
+      padding: 1.3rem 1rem;
+      background: $gray-box-bg;
+      font-weight: $font-weight-semi-bold;
+      color: $gray-medium;
+    }
+  }
+  tbody{
+    td{
+      font-weight: $font-weight-regular;
+      color: $gray-default;
+    }
+  }
+  tfoot{
+    th{
+      border-top: 2px solid $gray-medium;
+      color: $gray-default;
+      font-weight: $font-weight-regular;
+    }
+  }
+  .tableModal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &.is-inputTable{
+    .datePicker__input{
+      padding: 0;
+      border:0;
+      height: auto;
+      line-height: 2.4rem;
+    }
+    .formControl__input{
+      height: auto;
+      line-height: 2.4rem;
+      border: 0;
+      text-align: center;
+    }
+    .tui-select-box-input{
+      height: auto;
+      border: 0;
+      text-align: left;
+      .tui-select-box-placeholder{
+        line-height: 2.4rem;
+        color: $gray-default;
+      }
+    }
+  }
+}

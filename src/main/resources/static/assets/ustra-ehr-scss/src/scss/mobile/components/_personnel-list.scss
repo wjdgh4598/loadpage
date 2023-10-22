@@ -1,0 +1,60 @@
+.personnel-list {
+    display: flex;
+}
+
+.personnel-item {
+    .columns {
+        &:not(:last-child) {
+            &:not(.is-last) {
+                margin-bottom: 21rem;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        &:not(.is-last) {
+            margin-right: 50rem;
+        }
+    }
+}
+
+.personnel-item-title {
+    margin-bottom: 27rem;
+    font-size: 16rem;
+    font-weight: 600;
+    line-height: 19rem;
+    color: black;
+}
+
+.personnel-photo {
+    margin-right: 11rem;
+    border-radius: 50%;
+    width: 36rem;
+    height: 36rem;
+}
+
+.personnel-activity {
+    display: flex;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+.personnel-name {
+    margin-right: 57rem;
+    font-weight: 500;
+    color: #151515;
+}
+
+.personnel-status {
+    border-radius: 3rem;
+    padding: 2rem 6rem;
+    background-color: #eef2f5;
+    font-size: 12rem;
+    font-weight: 500;
+    line-height: 15rem;
+    color: #476c97;
+}
+
+.personnel-working-hour {
+    color: #929292;
+}

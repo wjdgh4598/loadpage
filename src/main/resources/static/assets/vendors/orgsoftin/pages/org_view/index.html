@@ -1,0 +1,139 @@
+<html lang="ko">
+<head>
+    <title>조직도</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../css/bootstrap.softin.css">
+    <link rel="stylesheet" href="../../css/softin.font.css" />
+    <link rel="stylesheet" href="../../css/softin.css" />
+    <link rel="stylesheet" href="../../lib/bootstrap-datepicker/css/bootstrap-datepicker.css" />
+
+    <!-- JQuery  -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../../lib/dayjs/dayjs.min.js"></script>
+
+    <!-- INORG -->
+    <script type="text/javascript" src="../../lib/softin/softin.js"></script>
+	<script type="text/javascript" src="../../lib/softin/inorg/inorginfo.js"></script>
+	<script type="text/javascript" src="../../lib/softin/inorg/inorg.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="../../lib/bootstrap/4.5.0/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap-datepicker/locales/bootstrap-datepicker.ko.min.js"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="pull-left">
+                        <form class="form-inline">
+                            <div class="form-group" style="display: flex;">
+                                <label>기준일자</label>
+                                <input class="form-control" type="text" id="base_ymd" style="width: 100px;">
+                            </div>
+                            <div class="form-group" style="display: flex;">
+                                <label>디자인</label>
+                                <select class="form-control" id="select-design">
+                                    <option value="photoType" selected="">사진형</option>
+                                    <option value="namecardType">명함형</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="display: flex;">
+                                <label>
+                                    <input type="checkbox" id="check-include-member" class="checkbox-temp">팀원포함
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success" id="btn-retrieve">
+                                    조회</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3 text-right">
+                    <div class="pull-right">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="check-emp-compare-list" class="checkbox-temp">인원선택
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success" id="btn-emp-compare">
+                                    비교</button>
+                            </div>
+                            <div class="btn-group org-toolbar-area" role="group" id="org-toolbar-area">
+                                <button type="button" class="btn" data-tool-action="saveAsImage" title="이미지 다운로드">
+                                    <i class="org-image-down"></i>
+                                </button>
+                                <button type="button" class="btn" data-tool-action="zoomIn" title="확대">
+                                    <i class="org-expand"></i>
+                                </button>
+                                <button type="button" class="btn" data-tool-action="zoomOut" title="축소">
+                                    <i class="org-downscale"></i>
+                                </button>
+                                <button type="button" class="btn" data-tool-action="zoomReset" title="1:1 사이즈">
+                                    <i class="org-one-ratio"></i>
+                                </button>
+                                <button type="button" class="btn" data-tool-action="zoomToFit" title="FIT 사이즈">
+                                    <i class="org-full-view"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="article-wrapper" class="article-wrapper">
+        <div id="org-view" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+
+    <!-- 인사비교 팝업 -->
+    <div id="cm-e-emp-search-modal-area" class="container">
+        <div class="modal fade" id="cm-e-emp-compare-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content" style="background: transparent;
+                border: 0px; text-align: center;">
+                    <div class="modal-header" style="display: none;">
+                        <h4 class="modal-title">
+                            인사비교
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div id="cm-e-emp-compare-content" class="modal-body">
+                        <div id="compare-list" class="pull-left" style="display: flex; justify-content: center;"></div>
+                    </div>
+                    <div class="modal-footer" style="display: none;">
+                        <button type="button" class="btn btn-outline-primary dismiss" data-dismiss="modal">
+                            닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/data_map.js"></script>
+    <script type="text/javascript" src="js/node_template.js"></script>
+
+    <script type="text/javascript" src="../../lib/softin/inUtil.js"></script>
+    <script type="text/javascript" src="../../lib/softin/orgUtil.js"></script>
+    <script type="text/javascript" src="../../lib/softin/inconfig.js"></script>
+    <script type="text/javascript" src="../../lib/softin/inapp.js"></script>
+    <script type="text/javascript" src="../../lib/softin/app.js"></script>
+
+    <script type="text/javascript" src="js/data_manage.js"></script>
+    <script type="text/javascript" src="js/option_tool.js"></script>
+    <script type="text/javascript" src="js/emp_compare.js"></script>
+    <script type="text/javascript" src="js/org_view.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

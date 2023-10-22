@@ -1,0 +1,764 @@
+.card {
+    position: relative;
+    border: 1rem solid #151515;
+    padding: 0 29rem;
+    background-color: $white;
+
+    input {
+        &:checked {
+            ~ .icon {
+                &.is-status-checkmark {
+                    &.is-filled {
+                        display: block;
+                        top: 16rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .media {
+        &:not(:last-child) {
+            margin-bottom: $block-spacing;
+        }
+    }
+
+    &:focus,
+    &.is-focus,
+    &.is-active {
+        outline: none;
+        border: 1rem solid $blue_60;
+    }
+
+    &.is-expandable {
+        .icon {
+            &.is-navigation-chevron {
+                &.is-down {
+                    display: block;
+                    bottom: 16rem;
+                }
+            }
+        }
+    }
+
+    &.is-horizontal {
+        display: flex;
+        padding: 20rem 29rem !important;
+
+        .card-header {
+            margin: 10rem 75rem 0 0;
+            padding: 0;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .columns {
+            &.has-gap {
+                margin: -10rem -15rem;
+
+                .column {
+                    margin: 10rem 15rem;
+                }
+            }
+        }
+
+        .button {
+            &.is-more {
+                position: absolute;
+                top: 19rem;
+                right: 30rem;
+            }
+        }
+    }
+
+    &.has-title-icon {
+        .table {
+            > colgroup {
+                > col {
+                    &:last-child {
+                        &:not(:nth-child(3)) {
+                            width: 25%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &:not(:last-child) {
+                            width: 61%;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 9rem 29rem 14rem;
+        }
+    }
+
+    &.has-header-background-color {
+        .card-body {
+            padding: 20rem;
+        }
+    }
+
+    &.is-admin {
+        .card-body {
+            padding: 0 18rem 18rem;
+        }
+
+        .card-title {
+            padding: 16rem 19rem;
+            font-size: 16rem;
+        }
+    }
+
+    &.is-main,
+    &.is-sub,
+    &.is-login,
+    &.find-password {
+        border: none;
+        padding: 0 30rem 30rem;
+    }
+
+    &.is-main {
+        border-radius: 13rem;
+
+        .card-header {
+            border-bottom: none;
+        }
+
+        .card-title {
+            font-size: 18rem;
+            line-height: 21rem;
+            color: black;
+
+            &:not(:last-child) {
+                &:not(.is-last) {
+                    margin-bottom: 14rem;
+                }
+            }
+        }
+
+        .table {
+            font-size: 16rem;
+            line-height: 19rem;
+
+            > thead,
+            > tbody {
+                > tr {
+                    th {
+                        font-weight: 400;
+                    }
+
+                    td {
+                        height: 42rem;
+                    }
+                }
+            }
+        }
+        
+        &.has-tabs {
+            padding: 10rem 40rem 38rem;
+
+            .card-header {
+                padding: 28rem 0 6rem;
+            }
+        }
+
+        &.has-lists {
+            padding: 0 30rem 36rem;
+
+            .card-header {
+                padding: 30rem 35rem 0;
+            }
+            
+            .card-body {
+                padding: 11rem 18rem 0 35rem;
+            }
+        }
+    
+        &.has-rows {
+            padding: 0 20rem 30rem;
+
+            .card-header {
+                padding: 29rem 10rem 13rem;
+            }
+    
+            .card-body {
+                padding: 8rem 10rem 0;
+            }
+        }
+
+        &.has-table {
+            padding: 0 30rem 25rem;
+
+            .card-header {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .card-body {
+                padding: 0 10rem 0 0;
+            }
+        }
+
+        &.is-quick-menu {
+            padding: 24rem;
+
+            .columns {
+                &.has-gap {
+                    &.is-wrapped {
+                        margin-bottom: -10rem;
+                    }
+                }
+            }
+
+            .column {
+                flex: 0 auto;
+                display: flex;
+                align-items: center;
+                width: calc(100% / 4 - 20rem);
+
+                &:hover {
+                    font-weight: 700;
+                    
+                    .icon {
+                        background-color: #b4d0e9;
+                    }
+                }
+            }
+
+            a {
+                color: #151515;
+            }
+        }
+
+        &.is-chart {
+            padding: 0 30rem;
+            
+            .card-header {
+                padding: 30rem 0 0;
+            }
+
+            .card-body {
+                padding: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20rem;
+        }
+    }
+
+    &.is-sub {
+        border-radius: 13rem;
+        padding: 20rem 20rem 30rem;
+        border: 1px solid #EFA54E;
+
+        .card-header {
+            border-bottom: none;
+            margin-bottom: 12rem;
+        }
+
+        .card-title {
+            font-size: 18rem;
+            line-height: 21rem;
+            color: black;
+
+            &:not(:last-child) {
+                &:not(.is-last) {
+                    margin-bottom: 14rem;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        &.has-tabs {
+            padding: 10rem 40rem 38rem;
+
+            .card-header {
+                padding: 28rem 0 4rem;
+            }
+        }
+
+        &.has-lists {
+            padding: 30rem 27rem 36rem;
+        }
+
+        &.has-table {
+            padding: 0 30rem 25rem;
+
+            .card-header {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .card-body {
+                padding: 0 10rem 0 0;
+            }
+        }
+
+        &.is-quick-menu {
+            padding: 24rem;
+
+            .columns {
+                &.has-gap {
+                    &.is-wrapped {
+                        margin-bottom: -10rem;
+                    }
+                }
+            }
+
+            .column {
+                flex: 0 auto;
+                display: flex;
+                align-items: center;
+                width: calc(100% / 4 - 20rem);
+
+                &:hover {
+                    .icon {
+                        background-color: #b4d0e9;
+                    }
+                }
+            }
+        }
+
+        &.is-chart {
+            padding: 0 30rem;
+            
+            .card-header {
+                padding: 28rem 0 0;
+            }
+
+            .card-body {
+                padding: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20rem;
+        }
+    }
+    
+    &.is-search {
+        padding: 0;
+    }
+
+    &.is-login {
+        border-radius: 30rem;
+        padding: 98rem 90rem 110rem;
+        width: 500rem;
+
+        .card-body {
+            padding: 0;
+        }
+
+        .checkbox span,
+        a {
+            font-size: 15rem;
+            line-height: 18rem;
+            color: black;
+        }
+
+        .input {
+            border-radius: 10rem;
+            font-size: 16rem;
+            line-height: 19rem;
+            
+            &::placeholder {
+                font-size: 16rem;
+                line-height: 19rem;
+                color: #ccc;
+            }
+        }
+
+        .button {
+            &:not(:last-child) {
+                margin-bottom: 37rem;
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 35rem;
+        }
+    }
+
+    &.find-password {
+        border-radius: 30rem;
+        padding: 54rem 90rem 65rem;
+
+        .card-header {
+            margin-bottom: 53rem;
+            border-bottom: none;
+            padding: 0;
+        }
+
+        .card-title {
+            justify-content: center;
+            font-size: 28rem;
+            font-weight: 700;
+            line-height: 34rem;
+            color: black;
+        }
+
+        .card-description {
+            margin: 0 0 62rem;
+            text-align: center;
+            font-size: 16rem;
+            line-height: 30rem;
+            color: black;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .fields {
+            &.is-large {
+                &:not(:last-child) {
+                    margin-bottom: 78rem;
+                }
+            }
+        }
+
+        .control {
+            flex: auto;
+            min-width: auto;
+            
+            .input,
+            select {
+                border-radius: 10rem;
+                padding: 0 10rem;
+                font-size: 16rem;
+                line-height: 19rem;
+                color: #ccc;
+
+                &::placeholder {
+                    font-size: 16rem;
+                    line-height: 19rem;
+                    color: #ccc;
+                }
+            }
+        }
+
+        .button {
+            &:not(:last-child) {
+                margin-bottom: 35rem;
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 35rem;
+        }
+
+        &.is-done,
+        &.is-failed {
+            padding: 54rem 130rem 65rem;
+        }
+    }
+}
+
+.card-header {
+    position: relative;
+    padding: 0rem 0 0;
+    margin-bottom: 25rem;
+
+    .button {
+        &.is-refresh {
+            position: absolute;
+            top: 28rem;
+            right: 4rem;
+        }
+
+        &.is-more {
+            position: absolute;
+            top: 29rem;
+            right: 0;
+        }
+    }
+
+    &.is-horizontal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.has-icon {
+        align-items: center;
+        margin: 0.65em 1.05em 0em;
+        border-bottom: 1rem solid #dbdbdb;
+        padding-bottom: 0.15em;
+        box-shadow: none;
+        font-size: 18rem;
+        color: #151515;
+
+        .icon {
+            .is-subtitle {
+                margin-top: 0.4em;
+                width: 26rem;
+                height: 26rem;
+            }
+        }
+
+        .card-title {
+            padding: 15rem;
+        }
+    }
+
+    &.has-background-color {
+        padding: 11rem 18rem;
+        background-color: #d6d6d6;
+        box-shadow: none;
+
+        .card-title {
+            font-size: 18rem;
+            color: #151515;
+        }
+    }
+}
+
+.card-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 16rem;
+    font-weight: 700;
+    color: #151515;
+
+    &.is-centered {
+        justify-content: center;
+    }
+}
+
+.card-sub-title {
+    font-size: 14rem;
+    color: #666;
+}
+
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10rem;
+    cursor: pointer;
+}
+
+.card-image {
+    display: block;
+    position: relative;
+}
+
+.card-body {
+    padding: 0rem 12rem;
+    background-color: transparent;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:hover {
+        -ms-overflow-style: block;
+        scrollbar-width: block;
+
+        &::-webkit-scrollbar {
+            display: block;
+        }
+    }
+
+    &.is-horizontal {
+        display: flex;
+    }
+
+    &.has-no-padding {
+        padding: 0;
+    }
+}
+
+.card-description {
+    margin-right: 5rem;
+    font-size: 17rem;
+    line-height: 20rem;
+    text-align: right;
+    color: #151515;
+
+    &.is-aligned-left {
+        text-align: left;
+    }
+}
+
+.card-description-item {
+    margin-right: 15rem;
+}
+
+.card-description-number {
+    margin-right: 10rem;
+    font-size: 40rem;
+    font-weight: 700;
+    line-height: 48rem;
+}
+
+.card-description-unit {
+    font-size: 20rem;
+    font-weight: 500;
+    line-height: 48rem;
+
+    &:not(:last-child) {
+        &:not(.is-last) {
+            margin-right: 9rem;
+        }
+    }
+}
+
+.card-description-increase {
+    position: relative;
+    font-size: 14rem;
+    line-height: 17rem;
+    color: #d40000;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -12rem;
+        transform: translateY(-50%);
+        width: 7rem;
+        height: 5rem;
+        background-image: url(../background-images/svg/triangle.svg);
+    }
+}
+
+.card-text {
+    &.is-light-blue {
+        color: #359dff;
+    }
+
+    &.is-red {
+        color: #d40000;
+    }
+}
+
+.card-footer {
+    padding-top: 19rem;
+    padding-bottom: 29rem;
+}
+
+.card-footer-item {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5rem;
+
+    &:not(:last-child) {
+        border-right: 1rem solid $border-light;
+    }
+}
+
+.card-alert-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12rem 0;
+    font-weight: 500;
+    color: black;
+}
+
+@include to-mobile {
+    .card {
+        &.is-main,
+        &.is-sub,
+        &.is-login,
+        &.find-password {
+            border-radius: 13rem;
+            padding: 37rem 32rem 46rem;
+
+            .input,
+            select {
+                font-size: 14rem !important;
+                line-height: 17rem !important;
+                
+                &::placeholder {
+                    font-size: 14rem !important;
+                    line-height: 17rem !important;
+                    color: #ccc;
+                }
+            }
+        }
+        
+        &.is-login {
+            padding: 60rem 30rem 97rem;
+            width: 100%;
+
+            .button {
+                &:not(:last-child) {
+                    margin-bottom: 18rem;
+                }
+            }
+        }
+        
+        &.find-password {
+            .card-header {
+                margin-bottom: 45rem;
+            }
+
+            .card-title {
+                font-size: 20rem;
+                font-weight: 700;
+                line-height: 24rem;
+            }
+            
+            .card-description {
+                margin: 0 0 45rem;
+                font-size: 14rem;
+                line-height: 26rem;
+                color: #333;
+            }
+
+            .card-text {
+                font-weight: 500;
+            }
+
+            .fields {
+                &.is-large {
+                    .field {
+                        &:not(:last-child) {
+                            margin-bottom: 20rem;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 52rem;
+                    }
+                }
+            }
+
+            .button {
+                &:not(:last-child) {
+                    margin-bottom: 18rem;
+                }
+            }
+            
+            &.is-done,
+            &.is-failed {
+                padding: 37rem 30rem 46rem;
+                width: 100%;
+            }
+        }
+    }
+
+    .card.is-login .checkbox span,
+    .card.is-login a {
+        font-size: 14rem;
+        line-height: 17rem;
+        color: #6e6e6e;
+    }
+}

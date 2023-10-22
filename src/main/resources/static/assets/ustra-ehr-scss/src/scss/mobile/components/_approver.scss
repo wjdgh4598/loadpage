@@ -1,0 +1,47 @@
+.approver {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child){
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -22rem;
+            transform: translateX(-50%) rotate(90deg);
+            width: 20rem;
+            height: 20rem;
+            background-image: url(../background-images/svg/chevron-right-gray.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 28rem;
+    }
+}
+
+.approver-order {
+    width: 80rem;
+    color: #929292;
+}
+
+.approver-detail {
+    display: flex;
+    align-items: center;
+    
+    .profile-photo {
+        width: 28rem;
+        height: 28rem;
+    }
+}
+
+.approver-name {
+    font-weight: 600;
+
+    &:not(:last-child) {
+        margin-right: 5rem;
+    }
+}

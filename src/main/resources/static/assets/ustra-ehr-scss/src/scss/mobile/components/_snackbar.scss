@@ -1,0 +1,24 @@
+.snackbar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 9rem 0;
+    width: 236rem;
+    background-color: black;
+    text-align: center;
+    color: white;
+
+    .icon {
+        &.is-status-checkmark {
+            &.is-filled {
+                fill: #f4fff7;
+                margin-right: 5rem;
+            }
+        }
+    }
+}
+
+.snackbar-message {
+    font-size: 13rem;
+}

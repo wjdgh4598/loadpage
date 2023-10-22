@@ -1,0 +1,203 @@
+.fields {
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    &.is-large {
+        .field {
+            &:not(:last-child) {
+                margin-bottom: 20rem;
+            }
+        }
+
+        .control {
+            height: 52rem;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 15rem;
+        }
+    }
+
+    &.is-working-hours {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .field {
+            &:not(:last-child) {
+                margin: 0 0rem 0 0;
+            }
+        }
+
+        .tilde {
+            margin: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 38rem;
+        }
+    }
+}
+
+.field {
+    position: relative;
+    
+    &:not(:last-child) {
+        margin-bottom: 7.5rem;
+    }
+
+    &.is-grouped {
+        display: flex;
+        align-items: center;
+
+        > .control {
+            &:not(:last-child) {
+                margin-right: 3rem;
+                margin-bottom: 0;
+            }
+
+            &.is-expanded {
+                flex: auto;
+            }
+        }
+
+        &.is-centered {
+            justify-content: center;
+        }
+
+        &.is-right {
+            justify-content: flex-end;
+        }
+
+        &.is-spaced-between {
+            justify-content: space-between;
+
+            .control {
+                width: auto;
+            }
+        }
+
+        &.is-centered-vertically {
+            align-items: center;
+        }
+
+        &.is-multiline {
+            flex-wrap: wrap;
+
+            > .control {
+                &:not(:last-child) {
+                    margin-bottom: 7.5rem;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: -7.5rem;
+            }
+        }
+    }
+
+    &.is-only-of-class {
+        &:not(:last-child) {
+            margin-right: auto !important;
+            margin-bottom: 6rem !important;
+            height: auto;
+        }
+    }
+
+    &.has-tilde {
+        .control {
+            &.has-auto-width {
+                &:first-child {
+                    &::after {
+                        padding: 0 0 0 14rem;
+                    }
+                }
+
+                &:last-child {
+                    &::after {
+                        padding: 0 12rem 0 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-m-large {
+        &:not(:last-child) {
+            margin-bottom: 16rem;
+        }
+    }
+
+    &.is-large {
+        &:not(:last-child) {
+            margin-bottom: 39rem;
+        }
+    }
+
+    &.is-error {
+        input {
+            border-color: #ef0000;
+        }
+
+        .error-description {
+            display: block;
+        }
+    }
+}
+
+.field-label {
+    font-size: 13rem;
+    font-weight: 500;
+    line-height: 16rem;
+    color: #8e8e8e;
+
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    &.is-large {
+        &:not(:last-child) {
+            margin-bottom: 15rem;
+        }
+    }
+
+    &.is-black {
+        color: black;
+    }
+}
+
+.field-body {
+    flex: 5 1 0;
+    display: flex;
+
+    > .field {
+        &:not(:last-child) {
+            margin-right: 7.5rem;
+        }
+
+        &:not(.is-narrow) {
+            flex: 1;
+        }
+    }
+}
+
+@include to-mobile {
+    .fields {
+        &.is-large {
+            .field {
+                &:not(:last-child) {
+                    margin-bottom: 15rem;
+                }
+            }
+            
+            .control {
+                height: 42rem;
+            }
+        }
+    }
+}

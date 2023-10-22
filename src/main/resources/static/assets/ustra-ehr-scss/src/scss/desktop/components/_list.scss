@@ -1,0 +1,131 @@
+.list {
+    @include block;
+    border-top: 1rem solid $gray_20;
+    border-radius: $radius;
+    background-color: $scheme-main;
+    box-shadow: 0 2rem 3rem rgba($scheme-invert, 0.1),
+        0 0 0 1rem rgba($scheme-invert, 0.1);
+
+    &.has-border {
+        border-radius: 0;
+        box-shadow: none;
+        font-size: 16rem;
+
+        li {
+            border-left: 1rem solid #dbdbdb;
+            border-right: 1rem solid #dbdbdb;
+            border-bottom: 1rem solid #dbdbdb;
+        }
+
+        a {
+            display: block;
+            padding: 8rem 44rem 8rem 18rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23dbdbdb' d='M11.4,10,1.4,20,0,18.6,8.6,10,0,1.4,1.4,0Z' transform='translate(10.6 6)'/%3E%3C/svg%3E");
+            background-position: calc(100% - 10rem);
+            background-size: 24rem;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+    }
+
+    label {
+        display: block;
+        position: relative;
+        border-bottom: 1rem solid $gray_20;
+        padding: 14rem 12rem;
+
+        &:hover,
+        &.is-hover {
+            background-color: $gray_10;
+        }
+
+        &:focus,
+        &.is-focus {
+            outline: 1rem solid $blue_60;
+            outline-offset: -1rem;
+            background-color: $white;
+        }
+
+        &.is-active,
+        &.is-checked {
+            background-color: $gray_20;
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            color: $gray_30;
+
+            &:hover,
+            &.is-hover,
+            &:focus,
+            &.is-focus {
+                outline: none;
+                background-color: transparent;
+            }
+
+            .icon {
+                fill: $gray_20;
+            }
+        }
+    }
+
+    dd {
+        display: none;
+        padding: 10rem;
+        background-color: $gray_10;
+    }
+
+    input {
+        display: none;
+
+        &:checked {
+            ~ .icon.is-status-checkmark.is-filled {
+                display: inline-flex;
+            }
+        }
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 11rem;
+        transform: translateY(-50%);
+
+        &_status_checkmark_filled {
+            display: none;
+        }
+    }
+}
+
+.list-item {
+    display: block;
+    padding: 0.5em 1em;
+
+    &:not(a) {
+        color: $text;
+    }
+
+    &:first-child {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1rem solid $border;
+    }
+
+    &.is-active {
+        background-color: $link;
+        color: $link-invert;
+    }
+}
+
+a.list-item {
+    background-color: $background;
+    cursor: pointer;
+}

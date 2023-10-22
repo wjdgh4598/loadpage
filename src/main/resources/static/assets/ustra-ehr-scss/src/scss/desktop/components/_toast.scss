@@ -1,0 +1,19 @@
+.toast {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3rem;
+  padding: 10rem 0;
+  background-color: #151515;
+  font-weight: 500;
+  color: white;
+
+  &.is-active {
+    display: flex;
+  }
+}

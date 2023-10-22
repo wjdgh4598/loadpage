@@ -1,0 +1,13 @@
+.help {
+    display: block;
+    margin-top: 2.5rem;
+    font-size: $size-small;
+
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+
+        &.is-#{$name} {
+            color: $color;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.swiper-button-prev,
+.swiper-button-next {
+    top: 57rem;
+    margin-top: auto;
+    border: 1rem solid #efefef;
+    width: 24rem;
+    height: 24rem;
+    color: #666;
+
+    &::after,
+    &::after {
+        font-size: 10rem;
+    }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: auto;
+    right: 44rem;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: 10rem;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 50%;
+    bottom: -14rem;
+    transform: translateX(-50%);
+    width: calc(100% - 20rem);
+}
+
+.swiper-scrollbar {
+    border-radius: 5rem;
+    height: 4rem;
+    background-color: #e1e1e1;
+}
+
+.swiper-scrollbar-drag {
+    background-color: #6e6e6e;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+    <th:block th:fragment="configFragment">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title th:text="'스마일게이트 재무포탈'"></title>
+            
+            <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+            <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+            <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#333333">
+            <meta name="msapplication-TileColor" content="#ffffff">
+            <meta name="theme-color" content="#ffffff">
+
+            <!-- styles -->
+             <link rel="stylesheet" href="/assets/bundle/desktop.css" />
+            <!-- 개발자 추가 -->
+            <link rel="stylesheet" href="/assets/css/custom.css" />
+            <link rel="stylesheet" href="/assets/css/toastui-editor.min.css" />
+            <link rel="stylesheet" href="/assets/css/elctr-taxin/tax-print.css" />
+            
+            <link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/font-awesome.min.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/froala_editor.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/froala_style.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/code_view.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/colors.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/emoticons.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/image_manager.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/image.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/line_breaker.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/table.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/char_counter.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/video.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/fullscreen.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/file.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/plugins/quick_insert.css">
+			<link rel="stylesheet" href="/assets/css/froala_editor_4.0.16/codemirror.min.css">
+			
+			<!-- <link rel="stylesheet" type="text/css" href="/assets/css/toastchart_v3.11.3/tui-chart.css" /> -->
+		    
+			<link rel="stylesheet" href="/assets/css/toastui-chart/toastui-chart.min.css">
+
+            <!-- <link rel="stylesheet" href="/assets/vendors/orgsoftin/lib/jstree/"> -->
+			
+			<script src="/assets/bundle/desktop.js"></script>
+			<script src="/assets/bundle/renewal.js"></script>
+              
+            <th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') == 'prod' }">
+                <script th:src="@{/assets/vendors/realgrid/realgrid-lic-prod.js}"></script>
+            </th:block>
+            <th:block th:if="${ @environment.getProperty('spring.config.activate.on-profile') != 'prod' }">
+                <script th:src="@{/assets/vendors/realgrid/realgrid-lic.js}"></script>
+            </th:block>
+            
+            <!-- dev 관련  script -->
+            <script src="/assets/vendors/ubiform/ubcrypt.min.js"></script>
+            <script src="/assets/js/ustra-utils/ustra.common.js"></script>
+            <script src="/assets/js/common.js"></script>
+            <script src="/assets/js/common-cibas.js"></script>
+            
+            <script src="/assets/vendors/orgsoftin/lib/jstree/jstree.js"></script>
+            <script src="/assets/vendors/orgsoftin/lib/jstree/jstree.min.js"></script>
+            <script src="/assets/vendors/orgsoftin/lib/jstree/dragAndDrop.js"></script>
+            <script src="/assets/vendors/orgsoftin/lib/jstree/jstree.massload.js"></script>
+            <script src="/assets/vendors/orgsoftin/lib/jstree/jstree.search.js"></script>
+            <script src="/assets/vendors/orgsoftin/lib/jstree/vakata-jstree.js"></script>
+  			<script src="/assets/vendors/orgsoftin/lib/jstree/jqueryUi/jquery-ui.js"></script>
+            <!-- <script src="/assets/vendors/orgsoftin/lib/jstree/jqueryUi/jquery-ui.min"></script> -->
+            <!-- <link rel="icon" type="image/png" sizes="16x16" href="/assets/vendors/orgsoftin/lib/jstree/css/images/template_pc.png"> -->
+            <!-- <script defer src="/assets/js/desktop.js"></script> -->
+        </head>
+    </th:block>
+</html>

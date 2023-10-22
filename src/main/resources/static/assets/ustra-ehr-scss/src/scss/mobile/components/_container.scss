@@ -1,0 +1,66 @@
+.container {
+    @include to-desktop {
+        &.is-widescreen {
+            max-width: $widescreen - 2 * $gap;
+        }
+    }
+
+    @include from-desktop {
+        max-width: $desktop - 2 * $gap;
+    }
+
+    @include to-widescreen {
+        &.is-fullhd {
+            max-width: $fullhd - 2 * $gap;
+        }
+    }
+
+    @include from-widescreen {
+        max-width: $widescreen - 2 * $gap;
+    }
+
+    @include from-fullhd {
+        max-width: $fullhd - 2 * $gap;
+    }
+
+    &.is-modeless {
+        padding-top: 20rem;
+        width: 1100rem;
+
+        .page-body {
+            padding: 0;
+        }
+
+        .page-title {
+            margin-bottom: 20rem;
+        }
+
+        .table {
+            &.is-approval {
+                margin-bottom: 10rem;
+            }
+        }
+
+        .ustra-grid {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.is-fluid {
+        padding-left: $gap;
+        padding-right: $gap;
+        max-width: none;
+        width: 100%;
+    }
+
+    &.is-page {
+        height: calc(100vh - 95rem);
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+
+    &.is-mdi {
+    }
+}

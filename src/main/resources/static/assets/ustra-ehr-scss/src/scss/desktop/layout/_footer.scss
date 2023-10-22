@@ -1,0 +1,19 @@
+$footer-color: false !default;
+
+.footer {
+  position: relative;
+  margin-top: auto;
+  padding: 40rem 0;
+  background-color: #464646;
+	@if $footer-color {
+        color: $footer-color;
+    }
+  .footer__information{
+    text-align: center;
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 22rem;
+    color: #ADADAD;
+  }
+
+}

@@ -1,0 +1,231 @@
+.left-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 0;
+    overflow-y: auto;
+    overflow-y: overlay;
+    background-color: white;
+    box-shadow: 0 0 8rem rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+
+    &.is-small {
+        font-size: $size-small;
+    }
+
+    &.is-medium {
+        font-size: $size-medium;
+    }
+
+    &.is-large {
+        font-size: $size-large;
+    }
+
+    &.is-absolute {
+        position: absolute;
+    }
+
+    &.is-closed {
+        padding: 0;
+        width: 0;
+
+        .menu-label,
+        .menu {
+            display: none;
+        }
+
+        .button.is-menu {
+            border-left: 1rem solid #dedede;
+            border-right: none;
+            transform: rotate(180deg);
+        }
+    }
+
+    &.is-active {
+        padding: 35rem 20rem;
+        width: 270rem;
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+
+        .field {
+            &.is-menu-bottom {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            &.is-inbound {
+                transform: none;
+            }
+        }
+
+        ~ .page {
+            .columns {
+                &.is-mdi {
+                    max-width: 1680rem;
+                }
+            }
+
+            // .page-body {
+            //   max-width: 1680rem;
+            // }
+        }
+    }
+}
+
+.sub-menu {
+    border-top: 1rem solid #f1f1f1;
+}
+
+.sub-menu-item {
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus {
+        > a {
+            font-weight: 500;
+            color: black;
+        }
+    }
+
+    &.is-active {
+        > a {
+            &::before {
+                background-color: black;
+            }
+        }
+    }
+}
+
+.sub-menu-link {
+    display: block;
+    position: relative;
+    padding: 12rem 8rem 10rem;
+    background-image: url(../background-images/svg/chevron-right.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3rem);
+    background-size: 16rem;
+    font-size: 15rem;
+    font-weight: 500;
+    line-height: 18rem;
+}
+
+.button {
+    &.is-inbound {
+        position: absolute;
+        top: 0;
+        right: -38rem;
+        z-index: 10;
+        border: 1rem solid transparent;
+        border-right-color: #dedede !important;
+        border-bottom-color: #dedede;
+        padding: 0 1rem 1rem 0;
+        min-width: auto;
+        height: auto;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+
+.menu {
+    margin: 11rem 0 14rem;
+    font-size: 15rem;
+    color: #666;
+}
+
+.menu-item {
+    margin-bottom: 8rem;
+
+    &:last-child {
+        border-bottom: 1rem solid #f1f1f1;
+    }
+
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus {
+        > a {
+            color: black;
+        }
+    }
+}
+
+.menu-link {
+    display: block;
+    position: relative;
+    padding: 11rem 0;
+    font-size: 14rem;
+    font-weight: 600;
+    line-height: 17rem;
+    color: #828282;
+
+    &:hover {
+        &::after {
+            border-color: #151515;
+        }
+    }
+}
+
+.menu-label {
+    transition: opacity 0.1s;
+    font-size: 18rem;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: #0354ff;
+
+    &:not(:first-child) {
+        margin-top: 1em;
+    }
+}
+
+.field.is-menu-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1rem solid #dbdbdb;
+    padding: 0 11rem;
+    height: 40rem;
+    background-color: #f0f3f9;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.1s;
+
+    .control {
+        width: 100%;
+    }
+}
+
+.left-navbar-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-navbar-footer-link {
+    display: flex;
+    align-items: center;
+}
+
+.left-navbar-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.23);
+}
+
+.left-navbar.is-active {
+    ~ .left-navbar-background {
+        display: block;
+    }
+}

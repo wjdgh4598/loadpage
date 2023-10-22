@@ -1,0 +1,304 @@
+.file {
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    justify-content: flex-start;
+    user-select: none;
+
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            .file-cta {
+                border-color: transparent;
+                background-color: $color;
+                color: $color-invert;
+            }
+
+            &:hover,
+            &.is-hover {
+                .file-cta {
+                    border-color: transparent;
+                    background-color: bulmaDarken($color, 2.5%);
+                    color: $color-invert;
+                }
+            }
+
+            &:focus,
+            &.is-focus {
+                .file-cta {
+                    border-color: transparent;
+                    box-shadow: 0 0 0.5em bulmaRgba($color, 0.25);
+                    color: $color-invert;
+                }
+            }
+
+            &.is-active {
+                .file-cta {
+                    border-color: transparent;
+                    background-color: bulmaDarken($color, 5%);
+                    color: $color-invert;
+                }
+            }
+        }
+    }
+
+    &.is-small {
+        font-size: $size-small;
+    }
+
+    &.is-medium {
+        font-size: $size-medium;
+
+        .file-icon {
+            .fa {
+                font-size: 21rem;
+            }
+        }
+    }
+
+    &.is-large {
+        font-size: $size-large;
+
+        .file-icon {
+            .fa {
+                font-size: 28rem;
+            }
+        }
+    }
+
+    &.has-name {
+        .file-cta {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .file-name {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        &.is-empty {
+            .file-cta {
+                border-radius: $radius;
+            }
+
+            .file-name {
+                display: none;
+            }
+        }
+    }
+
+    &.is-boxed {
+        .file-label {
+            flex-direction: column;
+        }
+
+        .file-cta {
+            flex-direction: column;
+            padding: 1em 3em;
+            height: auto;
+        }
+
+        .file-name {
+            border-width: 0 1rem 1rem;
+        }
+
+        .file-icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        &.is-small {
+            .file-icon {
+                .fa {
+                    font-size: 14rem;
+                }
+            }
+        }
+
+        &.is-medium {
+            .file-icon {
+                .fa {
+                    font-size: 28rem;
+                }
+            }
+        }
+
+        &.is-large {
+            .file-icon {
+                .fa {
+                    font-size: 35rem;
+                }
+            }
+        }
+
+        &.has-name {
+            .file-cta {
+                border-radius: $radius $radius 0 0;
+            }
+
+            .file-name {
+                border-width: 0 1rem 1rem;
+                border-radius: 0 0 $radius $radius;
+            }
+        }
+    }
+
+    &.is-centered {
+        justify-content: center;
+    }
+
+    &.is-fullwidth {
+        .file-label {
+            width: 100%;
+        }
+
+        .file-name {
+            flex: 1;
+            max-width: none;
+        }
+    }
+
+    &.is-right {
+        justify-content: flex-end;
+
+        .file-cta {
+            border-radius: 0 $radius $radius 0;
+        }
+
+        .file-name {
+            order: -1;
+            border-width: 1rem 0 1rem 1rem;
+            border-radius: $radius 0 0 $radius;
+        }
+    }
+}
+
+.file-label {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    &:hover,
+    &.is-hover {
+        .file-cta {
+            background-color: bulmaDarken($scheme-main-ter, 2.5%);
+            color: $text-strong;
+        }
+
+        .file-name {
+            border-color: bulmaDarken($border, 2.5%);
+        }
+    }
+
+    &:focus,
+    &.is-focus,
+    &.is-active {
+        .file-cta {
+            background-color: bulmaDarken($scheme-main-ter, 5%);
+            color: $text-strong;
+        }
+
+        .file-name {
+            border-color: bulmaDarken($border, 5%);
+        }
+    }
+}
+
+.file-input {
+    @include sr-only;
+
+    fieldset[disabled] &,
+    &[disabled] {
+        ~ .button {
+            border-color: #e1e1e1;
+            color: #bebebe;
+        }
+    }
+}
+
+.file-cta,
+.file-name {
+    @include control;
+    justify-content: center;
+    border-color: $border;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    font-size: 1em;
+}
+
+.file-cta {
+    border-width: 1rem;
+    padding: 0;
+    width: 86rem;
+    height: 26rem;
+    background-color: $scheme-main-ter;
+    color: $text;
+}
+
+.file-name {
+    display: block;
+    overflow: hidden;
+    border-width: 1rem 1rem 1rem 0;
+    border-style: solid;
+    border-color: $border;
+    max-width: 16em;
+    text-align: inherit;
+    text-overflow: ellipsis;
+}
+
+.file-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5em;
+    width: 1em;
+    height: 1em;
+}
+
+.file-uploader {
+    .field {
+        &:not(:last-child) {
+            margin-bottom: 4rem !important;
+        }
+
+        &.has-button {
+            .control {
+                &:not(:last-child) {
+                    margin-right: 11rem !important;
+                }
+            }
+        }
+    }
+
+    .field-message,
+    .field {
+        .icon {
+            margin-right: 4rem;
+        }
+    }
+}
+
+.file-drop {
+    display: none;
+
+    > tr {
+        > td {
+            &:not([align]) {
+                height: 72rem;
+                text-align: center;
+                color: #999;
+            }
+        }
+    }
+
+    &.is-active {
+        display: table-footer-group;
+    }
+}

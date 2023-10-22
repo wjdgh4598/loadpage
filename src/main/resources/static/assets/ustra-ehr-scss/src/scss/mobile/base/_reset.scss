@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+    // font-size: 6.25%;
+    font-size: 1px;
+}
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+body,
+ol,
+ul,
+dl,
+dd,
+fieldset,
+figure,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+iframe {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol,
+ul,
+fieldset,
+legend,
+button {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+input,
+textarea,
+select,
+button,
+text {
+    font-family: inherit;
+    color: inherit;
+}
+
+button,
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+button {
+    appearance: none;
+}
+
+img,
+video {
+    max-width: 100%;
+    // height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 10rem;
+    font-weight: normal;
+}
+
+fieldset[disabled] *,
+[disabled] {
+    cursor: not-allowed !important;
+}
+
+::-ms-clear {
+    display: none;
+}

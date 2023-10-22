@@ -1,0 +1,41 @@
+.help {
+    display: block;
+    margin-top: 2.5rem;
+    font-size: $size-small;
+
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+
+        &.is-#{$name} {
+            color: $color;
+        }
+    }
+}
+
+.tilde {
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 17rem;
+    color: #151515;
+}
+
+.error-description {
+    display: none;
+    position: absolute;
+    bottom: -20rem;
+    font-size: 13rem;
+    line-height: 16rem;
+    color: #ef0000;
+}
+
+.on-off-description {
+    font-size: 13rem;
+    line-height: 16rem;
+    color: black;
+}
+
+.on-off-text {
+    &:last-child {
+        display: none;
+    }
+}

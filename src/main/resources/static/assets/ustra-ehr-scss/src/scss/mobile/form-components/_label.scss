@@ -1,0 +1,12 @@
+.label {
+    &:not(:last-child) {
+        margin-right: 6rem;
+    }
+
+    &.is-timer {
+        display: flex;
+        font-size: 12rem;
+        line-height: 15rem;
+        color: #929292;
+    }
+}

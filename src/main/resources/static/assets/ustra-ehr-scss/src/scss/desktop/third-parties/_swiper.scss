@@ -1,0 +1,43 @@
+.swiper {
+    counter-reset: list;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: 57rem;
+    margin-top: auto;
+    border: 1rem solid #efefef;
+    width: 24rem;
+    height: 24rem;
+    color: #666;
+
+    &::after {
+        content: '';
+        width: 7rem;
+        height: 11rem;
+    }
+}
+
+.swiper-button-prev {
+    &::after {
+        background-image: url(../background-images/svg/chevron-left-round.svg);
+    }
+}
+
+.swiper-button-next {
+    &::after {
+        transform: rotate(180deg);
+        background-image: url(../background-images/svg/chevron-left-round.svg);
+    }
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: auto;
+    right: 44rem;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: 10rem;
+}

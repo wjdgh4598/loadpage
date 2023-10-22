@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g transform="translate(-264 -74)">
+    <g transform="translate(4)">
+      <path d="M945.942,133.07l4.207,4.207-4.207,4.207" transform="translate(1229.752 226.88) rotate(180)" fill="none" stroke-width="2" />
+      <line x2="7" transform="translate(280.5 89.5)" fill="none" stroke-width="2" />
+    </g>
+    <line x2="13.311" transform="translate(270.5 81.5)" fill="none" stroke-width="2" />
+    <line x2="13.311" transform="translate(270.5 96.5)" fill="none" stroke-width="2" />
+    <line x2="9.25" transform="translate(270.5 86.5)" fill="none" stroke-width="2" />
+    <line x2="9.25" transform="translate(270.5 91.5)" fill="none" stroke-width="2" />
+  </g>
+</svg>

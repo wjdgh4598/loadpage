@@ -1,0 +1,169 @@
+.modal {
+    @include overlay;
+    z-index: 40;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        border-radius: 13rem;
+    }
+
+    .card-header {
+        border-bottom: none;
+        padding: 30rem 0 6rem;
+    }
+
+    .card-title {
+        font-size: 20rem;
+        font-weight: 700;
+        line-height: 24rem;
+        color: black;
+    }
+
+    .card-body {
+        padding: 0 0 29rem;
+    }
+
+    .form {
+        &:not(:last-child) {
+            margin-bottom: 19rem;
+        }
+    }
+
+    .table-title {
+        margin: 11rem 0 10rem 3rem;
+        font-size: 14rem;
+        font-weight: 400;
+        line-height: 17rem;
+        color: black;
+    }
+
+    &.is-small {
+        .card-header {
+            margin: 0;
+            padding: 19rem 1rem 26rem;
+        }
+            
+        .card-title {
+            font-size: 17rem;
+            font-weight: 700;
+            line-height: 20rem;
+            color: #151515;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+    }
+
+    &.is-active {
+        display: flex;
+    }
+}
+
+.modal-background {
+    @include overlay(fixed);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content,
+.modal-card {
+    width: 718rem;
+
+    @include from-tablet {
+        margin: 0 auto;
+        max-height: calc(100vh - 40rem);
+        min-width: 640rem;
+    }
+}
+
+.modal-close {
+    @include delete;
+    position: fixed;
+    top: 20rem;
+    right: 20rem;
+    width: 40rem;
+    height: 40rem;
+    background: none;
+}
+
+.modal-card {
+    position: absolute !important;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    border: 1rem solid #151515;
+    width: 720rem;
+    background-color: white;
+
+    &.is-confirm {
+        width: 354rem;
+        font-size: 13rem;
+        font-weight: 500;
+
+        .modal-card-header {
+            padding-top: 15rem;
+            padding-bottom: 8rem;
+        }
+
+        .modal-card-body {
+            padding: 30rem 0 10rem;
+            text-align: center;
+        }
+
+        .modal-card-footer {
+            &:last-child {
+                padding: 15rem 0 28rem;
+            }
+        }
+
+        .icon {
+            margin-right: 4rem;
+        }
+
+        .button {
+            width: 94rem;
+            height: 32rem;
+        }
+    }
+}
+
+.modal-card-header,
+.modal-card-footer {
+    display: flex;
+    align-items: center;
+}
+
+.modal-card-header {
+    border-bottom: 1rem solid #e5e5e5;
+    justify-content: space-between;
+    margin: 0 30rem;
+    padding: 15rem 0 12rem;
+}
+
+.modal-card-footer {
+    &:last-child {
+        padding-bottom: 30rem;
+    }
+
+    .button {
+        &:not(:last-child) {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.modal-card-body {
+    padding: 17rem 28rem;
+    background-color: $scheme-main;
+
+    .table-title {
+        font-size: 13rem;
+    }
+}
+
+.modal-message {
+    text-align: left;
+}

@@ -1,0 +1,30 @@
+.login,
+.finding-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f5f6;
+}
+
+.finding-password {
+    &.is-done {
+        .card-header {
+            margin-bottom: 40rem;
+        }
+    }
+}
+
+@include to-mobile {
+    .login,
+    .finding-password {
+        padding: 0 18rem;
+        
+        &.is-done {
+            .card-header {
+                margin-bottom: 35rem;
+            }
+        }
+    }
+}

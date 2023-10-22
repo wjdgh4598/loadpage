@@ -1,0 +1,46 @@
+/**
+ * 별도 정의한 스타일
+ */
+
+.activity-overlay {
+  width: 100px;
+  text-align: center;
+}
+
+.activity-overlay span.activity-tag {
+  font-size:12px;
+  border: 1px solid #d5d5d5;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #6f6f6f
+}
+
+.instances-overlay {
+  display: flex;
+}
+
+.instances-overlay span.badge {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.instances-overlay span.badge.is-primary {
+  background-color: #0354ff;
+}
+
+.instances-overlay span.badge.is-secondary {
+  background-color: #333;
+}
+
+.instances-overlay span.badge:empty {
+  display: none;
+}

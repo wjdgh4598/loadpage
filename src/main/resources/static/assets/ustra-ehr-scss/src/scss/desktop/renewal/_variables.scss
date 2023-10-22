@@ -1,0 +1,79 @@
+// images - path
+$images: "/src/assets/images";
+
+// Docs
+$body-font-family: "NotoSansKR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+$body-font-size:  1.4rem;
+$body-font-weight: 400;
+$body-color: #333;
+
+//font-weight
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+// Theme Colors Variables
+$primary:         #ED5D2A;
+$primary2:        #FB8A62;
+$primary3:        #FFF1DC;
+$grid-bg:         #EFFBFA;
+$primary-bg:      #FAF4EB;
+$secondary1:      #43E1C4;
+$secondary2:      #8677E2;
+$error:           #e15050;
+$positive:        #336cff;
+
+$black:            #000;
+$white:            #fff;
+$gray:             #ABA8A7;
+$gray-default:     #373737;
+$gray-medium:      #979797;
+$gray-light:       #BEBEBE;
+$gray-disable:     #D4D4D4;
+$gray-box-bg:      #F8F8F8;
+$gray-box-bg2:      #F9F9F9;
+$gray-line:        #F0F0F0;
+
+ 
+$theme-colors: (
+    "white": $white,
+    "black": $black,
+    "primary": $primary,
+    "primary2": $primary2,
+    "primary3": $primary3,
+    "GridBox": $grid-bg,
+    "PrimaryBox": $primary-bg,
+    "secondary1": $secondary1,
+    "secondary2": $secondary2,
+    "error": $error,
+    "positive": $positive,
+);
+  
+$grays-colors: (
+    "gray" : $gray,
+    "grayDefault": $gray-default,
+    "grayMedium": $gray-medium,
+    "grayLight": $gray-light,
+    "grayDisable": $gray-disable,
+    "grayBox": $gray-box-bg,
+    "grayBox2": $gray-box-bg2,
+    "grayLine": $gray-line,
+);
+
+// Wrapper
+$wrapper-min-width: 160rem;
+
+// Body
+$body-font-family: "NotoSansKR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Malgun Gothic", "맑은 고딕", Dotum, "돋움", sans-serif;
+$body-font-size: 1.4rem;
+$body-font-weight: 400;
+
+// Layout
+$header-height: 6rem;
+$aside-width:   26rem;
+$footer-height: 15.2rem;
+
+// Header
+$logo-width: 30rem;
+$logo-height: 2.5rem;

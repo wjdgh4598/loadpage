@@ -1,0 +1,63 @@
+/* Blocks */
+.board {
+    padding: 17rem 0;
+    background-image: url(../background-images/svg/chevron-right.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 16rem;
+
+    .columns {
+        &:not(:last-child) {
+            margin-bottom: 19rem;
+        }
+    }
+
+    &.is-new {
+        &::after {
+            right: 25rem;
+        }
+    }
+}
+
+/* Elements */
+.board-title {
+    width: 84rem;
+    font-size: 14rem;
+    font-weight: 600;
+    line-height: 17rem;
+}
+
+.board-detail {
+    flex: 1;
+    width: 98rem;
+}
+
+.board-description {
+    font-size: 14rem;
+    line-height: 17rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.board-date {
+    font-size: 13rem;
+    line-height: 16rem;
+    color: #afafaf;
+
+    &:not(:last-child) {
+        margin: 10rem 0 26rem;
+    }
+}
+
+.boardor {
+    width: calc(100% - 84rem - 98rem);
+    padding-right: 25rem;
+    overflow: hidden;
+    text-align: right;
+    font-size: 13rem;
+    line-height: 16rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

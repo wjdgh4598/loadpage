@@ -1,0 +1,137 @@
+.fields {
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    &.is-large {
+        .field {
+            &:not(:last-child) {
+                margin-bottom: 20rem;
+            }
+        }
+
+        .control {
+            height: 52rem;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 20rem;
+        }
+    }
+}
+
+.field {
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    &.is-grouped {
+        display: flex;
+        align-items: center;
+
+        > .control {
+            &:not(:last-child) {
+                margin-right: 3rem;
+                margin-bottom: 0;
+            }
+
+            &.is-expanded {
+                flex: auto;
+            }
+        }
+
+        &.is-centered {
+            justify-content: center;
+        }
+
+        &.is-right {
+            justify-content: flex-end;
+        }
+
+        &.is-spaced-between {
+            justify-content: space-between;
+
+            .control {
+                width: auto;
+            }
+        }
+
+        &.is-centered-vertically {
+            align-items: center;
+        }
+
+        &.is-multiline {
+            flex-wrap: wrap;
+
+            > .control {
+                &:not(:last-child) {
+                    margin-bottom: 7.5rem;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: -7.5rem;
+            }
+        }
+
+        &.is-top {
+            align-items: flex-start;
+        }
+    }
+
+    &.is-only-of-class {
+        &:not(:last-child) {
+            margin-right: auto !important;
+            margin-bottom: 6rem !important;
+            height: auto;
+        }
+    }
+}
+
+.field-label {
+    flex: 1 0 0;
+    text-align: right;
+
+    &:not(:last-child) {
+        margin-right: 15rem;
+    }
+}
+
+.field-body {
+    flex: 5 1 0;
+    display: flex;
+
+    > .field {
+        &:not(:last-child) {
+            margin-right: 7.5rem;
+        }
+
+        &:not(.is-narrow) {
+            flex: 1;
+        }
+    }
+}
+
+@include to-mobile {
+    .fields {
+        &.is-large {
+            .field {
+                &:not(:last-child) {
+                    margin-bottom: 15rem;
+                }
+            }
+            
+            .control {
+                height: 42rem;
+            }
+            
+            &:not(:last-child) {
+                margin-bottom: 15rem;
+            }
+        }
+    }
+}

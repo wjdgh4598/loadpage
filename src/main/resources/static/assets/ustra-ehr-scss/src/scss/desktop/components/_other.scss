@@ -1,0 +1,34 @@
+.block {
+    @include block;
+}
+
+.delete {
+    @include delete;
+}
+
+.heading {
+    display: block;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 11rem;
+}
+
+.loader {
+    @include loader;
+}
+
+.number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15rem;
+    border-radius: 50%;
+    padding: 2.5rem 5rem;
+    min-width: 2.5em;
+    height: 2em;
+    background-color: $background;
+    vertical-align: top;
+    text-align: center;
+    font-size: $size-medium;
+}

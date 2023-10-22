@@ -1,0 +1,65 @@
+.personnel-list {
+    display: flex;
+    margin: -18rem;
+}
+
+.personnel-item {
+    margin: 18rem;
+    padding-bottom: 40rem;
+    width: calc(100% / 3);
+    
+    .columns {
+        &:not(:last-child) {
+            &:not(.is-last) {
+                margin-bottom: 26rem;
+            }
+        }
+    }
+}
+
+.personnel-title-list {
+    display: flex;
+    margin: -28rem;
+}
+
+.personnel-title-item {
+    margin: 28rem;
+    width: calc(100% / 3);
+    font-size: 18rem;
+    font-weight: 700;
+    line-height: 21rem;
+    color: black;
+}
+
+.personnel-photo {
+    margin-right: 13rem;
+    border-radius: 50%;
+    width: 36rem;
+    height: 36rem;
+}
+
+.personnel-activity {
+    display: flex;
+    align-items: center;
+}
+
+.personnel-name {
+    margin-bottom: 4rem;
+    font-weight: 500;
+    color: #151515;
+}
+
+.personnel-status {
+    margin-right: 4rem;
+    border-radius: 3rem;
+    padding: 2rem 6rem;
+    background-color: #eef2f5;
+    font-size: 13rem;
+    font-weight: 500;
+    line-height: 16rem;
+    color: #476c97;
+}
+
+.personnel-working-hour {
+    color: #929292;
+}

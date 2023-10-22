@@ -1,0 +1,85 @@
+$title-family: false !default;
+$subtitle-family: false !default;
+
+.title,
+.subtitle {
+    @include block;
+    word-break: break-word;
+
+    em,
+    span {
+        font-weight: inherit;
+    }
+
+    sub {
+        font-size: 0.75em;
+    }
+
+    sup {
+        font-size: 0.75em;
+    }
+
+    .tag {
+        vertical-align: middle;
+    }
+}
+
+.title {
+    font-size: $size-3;
+    font-weight: $weight-semibold;
+    color: $text-strong;
+    line-height: 1.125;
+
+    @if $title-family {
+        font-family: $title-family;
+    }
+
+    strong {
+        font-weight: inherit;
+        color: inherit;
+    }
+
+    + .highlight {
+        margin-top: -7.5rem;
+    }
+
+    &:not(.is-spaced) + .subtitle {
+        margin-top: -12.5rem;
+    }
+
+    @each $size in $sizes {
+        $i: index($sizes, $size);
+
+        &.is-#{$i} {
+            font-size: $size;
+        }
+    }
+}
+
+.subtitle {
+    font-size: $size-5;
+    font-weight: $weight-normal;
+    color: $text;
+    line-height: 1.25;
+
+    @if $subtitle-family {
+        font-family: $subtitle-family;
+    }
+
+    strong {
+        font-weight: $weight-semibold;
+        color: $text-strong;
+    }
+
+    &:not(.is-spaced) + .title {
+        margin-top: -12.5rem;
+    }
+
+    @each $size in $sizes {
+        $i: index($sizes, $size);
+
+        &.is-#{$i} {
+            font-size: $size;
+        }
+    }
+}

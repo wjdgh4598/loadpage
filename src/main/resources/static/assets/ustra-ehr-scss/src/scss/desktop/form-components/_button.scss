@@ -1,0 +1,480 @@
+@mixin button-small {
+    border-radius: 5rem;
+    padding: 0 10rem;
+    min-width: 26rem;
+    height: 26rem;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-width: 1rem;
+    border-style: solid;
+    font-size: 14rem;
+    line-height: 17rem;
+    
+    .icon {
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
+
+    span {
+        vertical-align: middle;
+    }
+
+    &:not(:last-child) {
+        &.is-fullwidth {
+            margin-bottom: 10rem;
+        }
+
+        &:not(.is-fullwidth) {
+            margin-right: 6rem;
+        }
+    }
+
+    &:hover,
+    &.is-hover {
+        .icon {
+            &.is-question {
+                fill: #151515;
+            }
+
+            &.is-star {
+                fill: #a7b4cb;
+            }
+
+            &.is-setting {
+                &.is-white {
+                    fill: #151515;
+                }
+            }
+        }
+    }
+
+    &:focus,
+    &.is-focus,
+    &.is-active {
+        .icon {
+            &.is-question {
+                fill: #151515;
+            }
+
+            &.is-star {
+                fill: #151515;
+            }
+        }
+    }
+
+    &[disabled] {
+        .icon {
+            &.is-question {
+                fill: #e9e9e9;
+            }
+
+            &.is-star {
+                fill: #e9e9e9;
+            }
+        }
+    }
+
+    &.is-chevron {
+        border-color: #dedede;
+        padding: 0;
+        min-width: 32rem;
+        .icon {
+            width: 20rem;
+            height: 20rem;
+            fill: #8f8f8f;
+        }
+
+        &:hover,
+        &.is-hover {
+            border-color: #0354ff;
+            .icon {
+                fill: #0354ff;
+            }
+        }
+
+        &:focus,
+        &.is-focus,
+        &.is-active {
+            border-color: #0354ff;
+            background-color: #f1f1f1;
+
+            .icon {
+                fill: #0354ff;
+            }
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            border-color: #e5e5e5;
+            background-color: #ddd;
+
+            .icon {
+                fill: #bfbfbf;
+            }
+        }
+    }
+
+    &.is-copy {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &.is-excel,
+    &.is-print {
+        .icon {
+            margin-right: 3rem;
+        }
+
+        // &:not(:last-child) {
+        // margin-right: 10rem !important;
+        // }
+    }
+
+    &.is-mdi {
+        position: absolute;
+        top: 50%;
+        right: 24rem;
+        transform: translateY(-50%);
+        border: none;
+        background-color: transparent;
+    }
+
+    &.is-close-window {
+        &:hover,
+        &.is-hover {
+            .icon {
+                &.is-close-window {
+                    fill: #151515;
+                    stroke: #151515;
+                }
+            }
+        }
+
+        &:focus,
+        &.is-focus,
+        &.is-active {
+            .icon {
+                &.is-close-window {
+                    fill: #1b2d4b;
+                    stroke: #1b2d4b;
+                }
+            }
+        }
+
+        fieldset[disabled] &,
+        &[disabled] {
+            .icon {
+                &.is-close-window {
+                    fill: #e5e5e5;
+                    stroke: #e5e5e5;
+                }
+            }
+        }
+    }
+
+    &.is-medium {
+        border-radius: 5rem;
+        padding: 0 10rem;
+        min-width: 63rem;
+        height: 32rem;
+
+        &.is-mdi,
+        &.is-close-window {
+            min-width: auto;
+            height: auto;
+            padding: 0;
+        }
+
+        &.is-square {
+            padding: 0 5rem;
+        }
+    }
+
+    &.is-large {
+        border-radius: 10rem;
+        padding: 0 10rem;
+        min-width: 86rem;
+        height: 52rem;
+        font-size: 18rem;
+        font-weight: 700;
+        line-height: 21rem;
+    }
+
+    &.is-setting {
+        position: absolute;
+        top: 24rem;
+        right: 10rem;
+    }
+
+    &.is-inbound {
+        &:hover,
+        &.is-hover {
+            .icon {
+                &.is-inbound {
+                    stroke: #151515;
+                }
+            }
+        }
+
+        &:focus,
+        &.is-focus,
+        &.is-active {
+            .icon {
+                &.is-inbound {
+                    stroke: #1b2d4b;
+                }
+            }
+        }
+
+        &[disabled] {
+            .icon {
+                &.is-inbound {
+                    stroke: #e5e5e5;
+                }
+            }
+        }
+    }
+
+    &.is-search {
+        border: none;
+        border-radius: 5rem;
+        padding: 0;
+        min-width: 77rem;
+        height: 32rem;
+        font-weight: 400;
+
+        .icon {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        &.is-outline {
+            border-width: 1rem;
+            border-style: solid;
+            padding: 0;
+        }
+    }
+
+    &.is-square {
+        min-width: 32rem;
+    }
+
+    &.is-new-window {
+        border: none;
+        font-size: 0;
+	    display: inline-block;
+	    width: 18rem;
+	    height: 18rem;
+	    padding: 0;
+	    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M15.8353 17L10.9324 12.0971C10.4029 12.5559 9.78529 12.9132 9.07941 13.1691C8.37353 13.425 7.62353 13.5529 6.82941 13.5529C4.92353 13.5529 3.30882 12.8912 1.98529 11.5676C0.661765 10.2441 0 8.64706 0 6.77647C0 4.90588 0.661765 3.30882 1.98529 1.98529C3.30882 0.661765 4.91471 0 6.80294 0C8.67353 0 10.2662 0.661765 11.5809 1.98529C12.8956 3.30882 13.5529 4.90588 13.5529 6.77647C13.5529 7.53529 13.4294 8.26765 13.1824 8.97353C12.9353 9.67941 12.5647 10.3412 12.0706 10.9588L17 15.8353L15.8353 17ZM6.80294 11.9647C8.23235 11.9647 9.45 11.4574 10.4559 10.4426C11.4618 9.42794 11.9647 8.20588 11.9647 6.77647C11.9647 5.34706 11.4618 4.125 10.4559 3.11029C9.45 2.09559 8.23235 1.58824 6.80294 1.58824C5.35588 1.58824 4.125 2.09559 3.11029 3.11029C2.09559 4.125 1.58824 5.34706 1.58824 6.77647C1.58824 8.20588 2.09559 9.42794 3.11029 10.4426C4.125 11.4574 5.35588 11.9647 6.80294 11.9647Z' fill='%23979797'/%3E%3C/svg%3E");
+	    vertical-align: middle;
+	    &:hover,
+	    &:focus{
+	      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M15.8353 17L10.9324 12.0971C10.4029 12.5559 9.78529 12.9132 9.07941 13.1691C8.37353 13.425 7.62353 13.5529 6.82941 13.5529C4.92353 13.5529 3.30882 12.8912 1.98529 11.5676C0.661765 10.2441 0 8.64706 0 6.77647C0 4.90588 0.661765 3.30882 1.98529 1.98529C3.30882 0.661765 4.91471 0 6.80294 0C8.67353 0 10.2662 0.661765 11.5809 1.98529C12.8956 3.30882 13.5529 4.90588 13.5529 6.77647C13.5529 7.53529 13.4294 8.26765 13.1824 8.97353C12.9353 9.67941 12.5647 10.3412 12.0706 10.9588L17 15.8353L15.8353 17ZM6.80294 11.9647C8.23235 11.9647 9.45 11.4574 10.4559 10.4426C11.4618 9.42794 11.9647 8.20588 11.9647 6.77647C11.9647 5.34706 11.4618 4.125 10.4559 3.11029C9.45 2.09559 8.23235 1.58824 6.80294 1.58824C5.35588 1.58824 4.125 2.09559 3.11029 3.11029C2.09559 4.125 1.58824 5.34706 1.58824 6.77647C1.58824 8.20588 2.09559 9.42794 3.11029 10.4426C4.125 11.4574 5.35588 11.9647 6.80294 11.9647Z' fill='%23373737'/%3E%3C/svg%3E");
+	    }
+        
+        
+        &[disabled="true"]{
+			display:none;
+		}
+    }
+
+    &.is-shuffle {
+        display: flex;
+        margin: 0;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 3rem;
+        border: 1rem solid #bebebe;
+
+        .icon {
+            stroke: #666;
+        }
+
+        &:not(:first-child) {
+            margin-top: 10rem;
+        }
+
+        &:hover,
+        &.is-hover {
+            .icon {
+                &.is-shuffle-arrow {
+                    stroke: #151515;
+                }
+            }
+        }
+
+        &:focus,
+        &.is-focus,
+        &.is-active {
+            background-color: #f0f3f9 !important;
+        }
+
+        &[disabled] {
+            border-color: #dbdbdb !important;
+            background-color: #dbdbdb !important;
+
+            .icon {
+                &.is-shuffle-arrow {
+                    stroke: #bfbfbf;
+                }
+            }
+        }
+    }
+
+    &.has-large-gap-right {
+        margin-right: 10rem !important;
+    }
+
+    &.is-small {
+        @include button-small;
+    }
+
+    &.is-fullwidth {
+        width: 100%;
+    }
+
+    @each $name, $pair in $colors {
+        $background-color: nth($pair, 1);
+        $color: nth($pair, 2);
+        $border-color: nth($pair, 3);
+
+        &.is-#{$name} {
+            background-color: $background-color;
+            color: $color;
+            border-color: $border-color;
+
+            @if length($pair) > 3 {
+                $background-color-hover: nth($pair, 4);
+                $color-hover: nth($pair, 5);
+                $border-color-hover: nth($pair, 6);
+                $background-color-focus: nth($pair, 7);
+                $color-focus: nth($pair, 8);
+                $border-color-focus: nth($pair, 9);
+                $background-color-active: nth($pair, 10);
+                $color-active: nth($pair, 11);
+                $border-color-active: nth($pair, 12);
+                $background-color-disabled: nth($pair, 13);
+                $color-disabled: nth($pair, 14);
+                $border-color-disabled: nth($pair, 15);
+
+                &:hover,
+                &.is-hover {
+                    border-color: $border-color-hover;
+                    background-color: $background-color-hover;
+                    color: $color-hover;
+                }
+
+                &:focus,
+                &.is-focus {
+                    border-color: $border-color-focus;
+                    background-color: $background-color-focus;
+                    color: $color-focus;
+                }
+
+                &.is-active {
+                    border-color: $border-color-active;
+                    background-color: $background-color-active;
+                    color: $color-active;
+                }
+
+                fieldset[disabled] &,
+                &[disabled] {
+                    border-color: $border-color-disabled;
+                    background-color: $background-color-disabled;
+                    color: $color-disabled;
+
+                    .icon {
+                        color: $color-disabled;
+                        stroke: white;
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+
+    .button {
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        &.is-close-window {
+            &:not(:last-child) {
+                margin-right: 14rem;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+
+    &.is-grouped {
+        .button {
+            margin: 0;
+        }
+    }
+
+    &.is-center {
+        justify-content: center;
+    }
+
+    &.is-centered-vertically {
+        align-items: center;
+    }
+
+    &.is-right {
+        justify-content: flex-end;
+    }
+
+    &.is-vertical {
+        flex-direction: column;
+
+        .button {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    &.is-top {
+        align-items: flex-start;
+    }
+
+    &.has-addon {
+        .button {
+            &:not(:last-child) {
+                margin-right: -1rem;
+            }
+        }
+    }
+
+    &.is-mdi {
+        padding: 0 25rem;
+    }
+}
+
+@include to-mobile {
+    .button {
+        &.is-large {
+            height: 42rem;
+            font-size: 15rem;
+            font-weight: 700;
+            line-height: 18rem;
+        }
+    }
+}

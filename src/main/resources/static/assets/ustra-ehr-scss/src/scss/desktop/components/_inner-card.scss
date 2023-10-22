@@ -1,0 +1,25 @@
+.inner-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    width: 100rem;
+    height: 80rem;
+    background-color: #f1f4f7;
+}
+
+.inner-card-title {
+    margin-bottom: 12rem;
+    font-size: 15rem;
+    font-weight: 500;
+    line-height: 18rem;
+    color: #666;
+}
+
+.inner-card-description {
+    font-size: 22rem;
+    font-weight: 500;
+    line-height: 26rem;
+    color: #151515;
+}

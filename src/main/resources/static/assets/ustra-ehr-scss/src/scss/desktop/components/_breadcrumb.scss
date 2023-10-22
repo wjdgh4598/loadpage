@@ -1,0 +1,185 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    font-size: 22rem;
+    font-weight: 400;
+    line-height: 20rem;
+    user-select: none;
+
+    ul,
+    ol {
+        display: flex;
+    }
+
+    li {
+        &:not(:last-child) {
+            a,
+            span {
+                margin-right: 7rem;
+            }
+        }
+    }
+
+    span {
+        color: #979797;
+        &:hover{
+			text-decoration: underline;
+		}
+    }
+
+    .icon {
+        &:first-child {
+            margin-right: 0.5em;
+        }
+
+        &:last-child {
+            margin-left: 0.5em;
+        }
+    }
+
+    &:not(:first-child) {
+        margin-top: 19rem;
+    }
+
+    &:not(:last-child) {
+        margin-right: 0rem;
+    }
+
+    .is-active {
+        a{
+			color: #373737;
+			font-weight: 700;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+    }
+
+    &.is-ellipsis {
+        &::after {
+            content: none;
+        }
+    }
+
+    &.is-centered {
+        ol,
+        ul {
+            justify-content: center;
+        }
+    }
+
+    &.is-right {
+        ol,
+        ul {
+            justify-content: flex-end;
+        }
+    }
+
+    &.is-small {
+        font-size: $size-small;
+    }
+
+    &.is-medium {
+        font-size: $size-medium;
+    }
+
+    &.is-large {
+        font-size: $size-large;
+    }
+
+    &.has-arrow-separator {
+        li {
+            + li {
+                &::before {
+                    content: "→";
+                }
+            }
+        }
+    }
+
+    &.has-bullet-separator {
+        li {
+            + li {
+                &::before {
+                    content: "•";
+                }
+            }
+        }
+    }
+
+    &.has-dot-separator {
+        li {
+            + li {
+                &::before {
+                    content: "·";
+                }
+            }
+        }
+    }
+
+    &.has-succeed-separator {
+        li {
+            + li {
+                &::before {
+                    content: "≻";
+                }
+            }
+        }
+    }
+
+    &.has-chevron-separator {
+        li {
+            &:not(:last-child) {
+                &::after {
+                    content: ">";
+                    margin-right: 6rem;
+                    color: #9e9e9e;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb {
+	&.home {
+      span{
+		display: inline-block;
+        margin-top: 3px;
+	    width: 12rem;
+	    height: 14rem;
+    	vertical-align: top;
+      	font-size: 0;
+      	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M1.125 13.75C0.8125 13.75 0.546875 13.6406 0.328125 13.4219C0.109375 13.2031 0 12.9375 0 12.625V5.3125C0 5.1375 0.0406249 4.96875 0.121875 4.80625C0.203125 4.64375 0.3125 4.5125 0.45 4.4125L5.325 0.75625C5.425 0.68125 5.53125 0.625 5.64375 0.5875C5.75625 0.55 5.875 0.53125 6 0.53125C6.125 0.53125 6.24375 0.55 6.35625 0.5875C6.46875 0.625 6.575 0.68125 6.675 0.75625L11.55 4.4125C11.6875 4.5125 11.7969 4.64375 11.8781 4.80625C11.9594 4.96875 12 5.1375 12 5.3125V12.625C12 12.9375 11.8906 13.2031 11.6719 13.4219C11.4531 13.6406 11.1875 13.75 10.875 13.75H7.5V8.5H4.5V13.75H1.125Z' fill='%23979797'/%3E%3C/svg%3E");
+	      &:hover {
+	        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='14' viewBox='0 0 12 14' fill='none'%3E%3Cpath d='M1.125 13.75C0.8125 13.75 0.546875 13.6406 0.328125 13.4219C0.109375 13.2031 0 12.9375 0 12.625V5.3125C0 5.1375 0.0406249 4.96875 0.121875 4.80625C0.203125 4.64375 0.3125 4.5125 0.45 4.4125L5.325 0.75625C5.425 0.68125 5.53125 0.625 5.64375 0.5875C5.75625 0.55 5.875 0.53125 6 0.53125C6.125 0.53125 6.24375 0.55 6.35625 0.5875C6.46875 0.625 6.575 0.68125 6.675 0.75625L11.55 4.4125C11.6875 4.5125 11.7969 4.64375 11.8781 4.80625C11.9594 4.96875 12 5.1375 12 5.3125V12.625C12 12.9375 11.8906 13.2031 11.6719 13.4219C11.4531 13.6406 11.1875 13.75 10.875 13.75H7.5V8.5H4.5V13.75H1.125Z' fill='%23373737'/%3E%3C/svg%3E");
+	      }
+		}
+    }
+    &:hover,
+    &:focus {
+        a {
+            color: #151515;
+        }
+    }
+
+    &.is-active {
+        span {
+            position: relative;
+            font-weight: 700;
+            color: black;
+        }
+    }
+}
+
+.checkbox{
+	&.is-star{
+		display:none;
+	}
+}
+.button{
+	&.is-question{
+		&.is-ghost{
+			display:none;
+		}
+	}
+} 

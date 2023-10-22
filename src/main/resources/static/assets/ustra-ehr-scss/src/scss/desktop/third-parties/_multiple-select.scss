@@ -1,0 +1,53 @@
+.ms-parent {
+    height: 100%;
+}
+
+.ms-choice {
+    @include input;
+    padding: 0 10rem;
+    height: 100%;
+
+    > div {
+        &.icon-caret {
+            display: none;
+        }
+    }
+
+    > span {
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 10px;
+
+        &.placeholder {
+            color: black;
+        }
+    }
+}
+
+.ms-drop {
+    border-color: #dbdbdb;
+    
+    ul {
+        > li {
+            padding: 4rem 8rem;
+            
+            label {
+                display: flex;
+                align-items: c;
+            }
+        }
+    }
+    
+    input {
+        &[type="radio"],
+        &[type="checkbox"] {
+            position: static;
+            margin: 0 8px 0 0;
+        }
+    }
+
+    &.bottom {
+        border-color: #6e6e6e;
+        box-shadow: none;
+    }
+}

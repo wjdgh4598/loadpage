@@ -1,0 +1,47 @@
+.logo {
+    display: flex;
+    
+    &.is-gsitm-hr {
+        width: 126rem;
+        height: 28rem;
+
+        svg {
+            width: 124rem;
+            height: 25rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 46rem;
+        }
+
+        &.is-large {
+            width: 176rem;
+            height: 35rem;
+            
+            svg {
+                width: 153rem;
+                height: 31rem;
+            }
+        }
+    }
+}
+
+@include to-mobile {
+    .logo {
+        &.is-gsitm-hr {
+            &:not(:last-child) {
+                margin-bottom: 32rem;
+            }
+            
+            &.is-large {
+                width: 126rem;
+                height: 28rem;
+                
+                svg {
+                    width: 124rem;
+                    height: 25rem;
+                }
+            }
+        }
+    }
+}

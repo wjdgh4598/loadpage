@@ -1,0 +1,575 @@
+.icon {
+    // display: inline-flex;
+    vertical-align: middle;
+
+    &.is-close {
+        &.is-gray {
+            stroke: #dfdfdf;
+
+            &:hover {
+                stroke: #444;
+            }
+        }
+
+        &.is-dark-gray {
+            stroke: #999;
+        }
+    }
+
+    &.is-check-c,
+    &.is-x-c {
+        margin: 12rem auto 14rem;
+
+        svg {
+            width: 36rem;
+            height: 36rem;
+        }
+    }
+
+    &.is-close-window {
+        fill: #bebebe;
+        stroke: #bebebe;
+    }
+
+    &.is-download-circle {
+        color: #bebebe;
+        
+        svg {
+            width: 28rem;
+            height: 28rem;
+        }
+    }
+
+    &.is-excel {
+        color: #08743b;
+    }
+
+    &.is-print {
+        color: #151515;
+    }
+
+    &.is-person-check {
+        svg {
+            width: 21.85rem;
+            height: 21.85rem;
+        }
+    }
+
+    &.is-people {
+        svg {
+            width: 20.67rem;
+            height: 20.67rem;
+        }
+    }
+
+    &.is-evaluation {
+        svg {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+
+    &.is-calendar-check {
+        svg {
+            width: 17.83rem;
+            height: 18.22rem;
+        }
+    }
+
+    &.is-clipboard {
+        svg {
+            width: 16.11rem;
+            height: 18.35rem;
+        }
+    }
+
+    &.is-plant {
+        svg {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+
+    &.is-wavy-circle-check {
+        svg {
+            width: 19.17rem;
+            height: 19.17rem;
+        }
+    }
+
+    &.is-hand-heart {
+        svg {
+            width: 21.05rem;
+            height: 21.33rem;
+        }
+    }
+
+    &.is-window-gear {
+        svg {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+
+    &.is-cabinet {
+        svg {
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+
+    &.is-presentation {
+        svg {
+            width: 22rem;
+            height: 22rem;
+        }
+    }
+
+    &.is-loader {
+        &.is-large {
+            svg {
+                width: 72rem;
+                height: 72rem;
+            }
+        }
+    }
+
+    &.is-search {
+        stroke: white;
+
+        &:not(:last-child) {
+            margin-right: 1rem !important;
+        }
+
+        &.is-blue {
+            stroke: #151515;
+        }
+
+        .profile & {
+            opacity: 0.75;
+        }
+    }
+
+    &.is-setting {
+        &.is-white {
+            fill: #bcbcbc;
+        }
+
+        &.is-blue {
+            fill: #151515;
+        }
+    }
+
+    &.is-status-information {
+        fill: $gray_50;
+    }
+
+    &.is-star {
+        fill: #bebebe;
+    }
+
+    &.is-menu {
+        fill: #cbcbcb;
+
+        svg {
+            width: 15rem;
+            height: 12rem;
+        }
+    }
+
+    &.is-navigation-chevron {
+        &.is-right {
+            fill: #8e8e8e;
+        }
+    }
+
+    &.is-question {
+        fill: #bebebe;
+    }
+
+    &.is-success {
+        fill: #0f61fd;
+    }
+
+    &.is-error {
+        fill: $red_60;
+    }
+
+    &.is-refresh {
+        svg {
+            width: 16rem;
+            height: 15.97rem;
+        }
+    }
+
+    &.is-parasol,
+    &.is-calendar-x,
+    &.is-suitcase,
+    &.is-clock,
+    &.is-receipt,
+    &.is-clipboard-check,
+    &.is-address-book,
+    &.is-question-balloon {
+        border-radius: 50%;
+        width: 42rem;
+        height: 42rem;
+        background-color: #eee;
+
+        &:not(:last-child) {
+            &:not(.is-last) {
+                margin-right: 10rem;
+            }
+        }
+    }
+
+    &.is-parasol {
+        svg {
+            width: 24.67rem;
+            height: 22.82rem;
+        }
+    }
+
+    &.is-calendar-x {
+        svg {
+            width: 22.01rem;
+            height: 21.65rem;
+        }
+    }
+
+    &.is-suitcase {
+        svg {
+            width: 23.73rem;
+            height: 20.08rem;
+        }
+    }
+
+    &.is-clock {
+        svg {
+            width: 23.37rem;
+            height: 25.87rem;
+        }
+    }
+
+    &.is-receipt {
+        svg {
+            width: 20.96rem;
+            height: 22.9rem;
+        }
+    }
+
+    &.is-clipboard-check {
+        svg {
+            width: 19.96rem;
+            height: 24.48rem;
+        }
+    }
+
+    &.is-address-book {
+        svg {
+            width: 19.76rem;
+            height: 24.56rem;
+        }
+    }
+
+    &.is-question-balloon {
+        svg {
+            width: 23.52rem;
+            height: 23.63rem;
+        }
+    }
+
+    &.is-title {
+        svg {
+            width: 45rem;
+            height: 45rem;
+        }
+    }
+
+    &.is-operations-search {
+        cursor: pointer;
+    }
+
+    &.is-inbound {
+        transform: rotate(180deg);
+        stroke: #bebebe;
+    }
+
+    &.is-formatting-attachment {
+        svg {
+            width: 13rem;
+            height: 13rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 0.5em;
+        }
+    }
+
+    &.is-user-user-avatar {
+        svg {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+
+    &.is-chevron-right {
+        fill: black;
+        
+        svg {
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+
+    &.is-calendar-chevron-left,
+    &.is-calendar-chevron-right {
+        width: 28rem;
+        height: 28rem;
+        
+        svg {
+          width: 5rem;
+          height: 9rem;
+        }
+    }
+    
+    &.is-calendar-chevron-right {
+        svg {
+          transform: rotate(180deg);
+        }
+    }
+
+    &.is-logout {
+        stroke: #333;
+    }
+
+    &.is-loader {
+        animation: spinAround 3s linear infinite;
+    }
+
+    &.is-small {
+        svg {
+            width: 14rem;
+            height: 14rem;
+        }
+    }
+
+    &.is-medium {
+        &.is-close {
+            svg {
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+
+        &.is-setting {
+            svg {
+                width: 14rem;
+                height: 14rem;
+            }
+        }
+
+        &.is-logo {
+            svg {
+                width: 171rem;
+                height: 38rem;
+            }
+        }
+
+        &.is-subtitle {
+            svg {
+                width: 14rem;
+                height: 14rem;
+            }
+        }
+
+        &.is-excel,
+        &.is-print {
+            svg {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+        &.is-close-window {
+            svg {
+                width: 23rem;
+                height: 17rem;
+            }
+        }
+
+        &.is-star {
+            svg {
+                width: 13rem;
+                height: 13rem;
+            }
+        }
+
+        &.is-chevron,
+        &.is-location,
+        &.is-logout {
+            svg {
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+
+        &.is-chevron {
+            stroke: #666;
+            fill: #666;
+        }
+
+        &.is-question {
+            svg {
+                width: 22rem;
+                height: 22rem;
+            }
+        }
+
+        &.is-search {
+            svg {
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+
+        &.is-inbound {
+            svg {
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+
+        &.is-negative,
+        &.is-positive {
+			display:none;
+            margin-right: 10rem;
+
+            svg {
+                width: 32rem;
+                height: 32rem;
+            }
+        }
+
+        &.is-toast-check {
+            margin-right: 7rem;
+
+            svg {
+                width: 18rem;
+                height: 18rem;
+            }
+        }
+
+        &.is-shuffle-arrow {
+            &.is-right,
+            &.is-left {
+                svg {
+                    width: 9rem;
+                    height: 15rem;
+                }
+            }
+
+            &.is-up,
+            &.is-down {
+                svg {
+                    width: 14rem;
+                    height: 7rem;
+                }
+            }
+        }
+
+        &.is-guide {
+            svg {
+                width: 18rem;
+                height: 18rem;
+            }
+        }
+
+        &.is-exclamation-triangle {
+            margin-right: 8rem;
+            width: 35rem;
+            height: 35rem;
+
+            svg {
+                width: 33rem;
+                height: 29rem;
+            }
+        }
+    }
+
+    &.is-large {
+        &.is-star {
+            svg {
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+
+        &.is-close {
+            margin: 2rem;
+
+            svg {
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+
+        &.is-search {
+            svg {
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+    }
+
+    &.is-triangle {
+        display: block;
+        border-top: 20rem solid transparent;
+        border-bottom: 20rem solid transparent;
+
+        &.is-right {
+            border-left: 15rem solid #dbdbdb;
+        }
+
+        &.is-left {
+            border-right: 15rem solid #dbdbdb;
+        }
+    }
+}
+
+.navbar-right {
+    .icon {
+        // margin-right: 1rem;
+    }
+}
+
+.svg {
+    &.is-inbound-hover,
+    &.is-inbound-focus,
+    &.is-inbound-active {
+        path,
+        line {
+            stroke: #0354ff;
+        }
+    }
+
+    &.is-inbound-disabled {
+        path,
+        line {
+            stroke: #d4d4d4;
+        }
+    }
+}
+
+@include to-mobile {
+    .icon {
+        &.is-check-c,
+        &.is-x-c {
+            margin: 5rem auto 10rem;
+    
+            svg {
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+    }
+}

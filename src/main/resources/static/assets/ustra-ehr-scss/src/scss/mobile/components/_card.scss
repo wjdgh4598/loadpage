@@ -1,0 +1,766 @@
+.card {
+    position: relative;
+
+    /* Elements */
+    input {
+        &:checked {
+            ~ .icon {
+                &.is-status-checkmark {
+                    &.is-filled {
+                        display: block;
+                        top: 16rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .button {
+        &.is-more {
+            position: absolute;
+            top: 50%;
+            right: -4rem;
+            transform: translateY(-50%);
+        }
+    }
+
+    .media {
+        &:not(:last-child) {
+            margin-bottom: $block-spacing;
+        }
+    }
+
+    /* Pseudos */
+    &:not(:last-child) {
+        margin-bottom: 15rem;
+    }
+
+    &:focus,
+    &.is-focus,
+    &.is-active {
+        outline: none;
+    }
+
+    /* Modifiers */
+    &.is-expandable {
+        .icon {
+            &.is-navigation-chevron {
+                &.is-down {
+                    display: block;
+                    bottom: 16rem;
+                }
+            }
+        }
+    }
+
+    &.is-horizontal {
+        display: flex;
+        padding: 20rem 29rem !important;
+
+        .card-header {
+            margin: 10rem 75rem 0 0;
+            padding: 0;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .columns {
+            &.has-gap {
+                margin: -10rem -15rem;
+
+                .column {
+                    margin: 10rem 15rem;
+                }
+            }
+        }
+
+        .button {
+            &.is-more {
+                position: absolute;
+                top: 19rem;
+                right: 30rem;
+            }
+        }
+    }
+
+    &.is-accordion {
+        padding: 20rem 25rem !important;
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: -8rem;
+                bottom: -5rem;
+                width: 16rem;
+                height: 16rem;
+                background-image: url(../background-images/svg/chevron-right.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform: rotate(90deg);
+            }
+        }
+
+        .id-photo {
+            width: 36rem;
+            
+            &:not(:last-child) {
+                margin-right: 12rem;
+            }
+        }
+
+        .profile-personnel {
+            color: black;
+
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+        }
+
+        .profile-name {
+            font-weight: 600;
+
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+
+        .profile-department {
+            font-size: 14rem;
+            line-height: 17rem;
+        }
+
+        .profile-position {
+            font-size: 14rem;
+            line-height: 17rem;
+            color: #8e8e8e;
+        }
+        
+        .card-body {
+            display: none;
+            border-top: 1rem solid #f1f1f1;
+            padding-top: 10rem;
+        }
+
+        .table {
+            th {
+                color: #afafaf;
+            }
+    
+            td {
+                height: 32rem;
+            }
+        }
+
+        .input {
+            font-weight: 400;
+            color: #151515;
+        }
+
+        &.is-active {
+            .card-header {
+                margin-bottom: 20rem;
+
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+            
+            .card-body {
+                display: block;
+            }
+        }
+    }
+
+    &.has-title-icon {
+        .table {
+            > colgroup {
+                > col {
+                    &:last-child {
+                        &:not(:nth-child(3)) {
+                            width: 25%;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &:not(:last-child) {
+                            width: 61%;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 9rem 29rem 14rem;
+        }
+    }
+
+    &.has-header-background-color {
+        .card-body {
+            padding: 20rem;
+        }
+    }
+
+    &.is-request {
+        .card-body {
+            padding: 10rem 20rem 30rem;
+        }
+    }
+
+    &.is-board {
+        padding: 7rem 10rem 8rem 20rem !important;
+    }
+
+    &.is-admin {
+        .card-body {
+            padding: 0 18rem 18rem;
+        }
+
+        .card-title {
+            padding: 16rem 19rem;
+            font-size: 16rem;
+        }
+    }
+    
+    &.is-login {
+    }
+
+    &.is-main {        
+        &.has-table {
+            .card-body {
+                padding: 12rem 21rem;
+            }
+        }
+
+        &.has-lists {
+            margin: 40rem 0;
+            padding: 0 10rem;
+            
+            .card-body {
+                margin-bottom: 9rem;
+                padding: 20rem 20rem 40rem;
+            }
+        }
+
+        &.has-tabs {
+            .card-header {
+                &:not(:last-child) {
+                    margin-bottom: 20rem;
+                }
+            }
+    
+            .card-title {
+                &:not(:last-child) {
+                    &:not(.is-last) {
+                        margin-bottom: 24rem;
+                    }
+                }
+            }
+
+            .button {
+                &.is-more {
+                    top: auto;
+                    right: -4rem;
+                    bottom: 10rem;
+                    transform: none;
+                }
+            }
+            
+            .card-body {
+                padding: 10rem 24rem;
+                min-height: 188rem;
+            }
+        }
+
+        &.has-columns {
+            .card-body {
+                padding: 10rem 24rem;
+            }
+        }
+
+        &.is-quick-menu {
+            padding: 23rem;
+
+            .columns {
+                &.has-gap {
+                    &.is-wrapped {
+                        margin-bottom: -10rem;
+                    }
+                }
+            }
+
+            .column {
+                flex: 0 auto;
+                display: flex;
+                align-items: center;
+                width: 154rem;
+
+                &:hover {
+                    .icon {
+                        background-color: #b4d0e9;
+                    }
+                }
+            }
+        }
+
+        &.is-chart {
+            padding: 0 30rem;
+            
+            .card-header {
+                padding: 28rem 0 0;
+            }
+
+            .card-body {
+                padding: 0;
+            }
+        }
+    
+        .card-title {
+            font-size: 18rem;
+            font-weight: 600;
+            line-height: 21rem;
+            
+            &.is-large {
+                font-size: 20rem;
+                font-weight: 600;
+                line-height: 24rem;
+            }
+        }
+    }
+
+    &.is-login {
+        border: none;
+        border-radius: 30rem;
+        padding: 100rem 90rem 110rem;
+        width: 500rem;
+        box-shadow: 0 0 8rem rgba(0, 0, 0, 0.08);
+
+        .card-body {
+            padding: 0;
+        }
+
+        .checkbox span,
+        a {
+            font-size: 15rem;
+            line-height: 18rem;
+            color: black;
+        }
+
+        .button {
+            &:not(:last-child) {
+                margin-bottom: 35rem;
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 35rem;
+        }
+    }
+
+    &.is-inside {
+        .card-body {
+            border-radius: 13rem;
+            background-color: white;
+            box-shadow: 0 0 8rem rgba(0, 0, 0, 0.08);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 35rem;
+        }
+    }
+
+    &:not(.is-inside) {
+        border-radius: 13rem;
+        padding: 10rem 10rem;
+        background-color: white;
+        box-shadow: 0 0 6rem rgba(0, 0, 0, 0.16);
+    }
+
+    &.is-profile {
+        padding: 29rem 30rem;
+        
+        .id-photo {
+            margin: 11rem 25rem 0 0;
+        }
+    }
+
+    &.is-detail {
+        padding: 10rem 24rem;
+    }
+
+    &.is-paystub-board {
+        padding: 0 20rem 0;
+    }
+
+    &.is-paystub-detail {
+        padding: 30rem 20rem 30rem 25rem;
+
+        .card-header,
+        .card-body {
+            border-bottom: 1rem solid #f1f1f1;
+            padding-bottom: 13rem;
+
+            &:not(:last-child) {
+                margin-bottom: 20rem;
+            }
+        }
+
+        .card-footer {
+            padding: 0;
+        }
+    }
+
+    &.is-approver {
+        display: none;
+        
+        .card-body {
+            padding: 6rem 12rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        &.is-active {
+            display: block;
+        }
+
+        &.is-large {
+            &:not(:last-child) {
+                margin-bottom: 19rem;
+            }
+        }
+    }
+
+    &.is-sub {
+        padding:20rem;
+
+        .card-header {
+            margin-bottom: 12rem;
+        }
+
+        .card-title {
+            font-weight: 700;
+        }
+    }
+
+    &.is-commute-history {
+        padding:20rem;
+
+        .card-header {
+            margin-bottom: 12rem;
+        }
+
+        .card-title {
+            font-weight: 700;
+        }
+
+        table.has-bottom-border {
+            .input {
+                color: #151515;
+            }
+        }
+    }
+
+    &.is-commute-times {
+        padding: 14rem 0 30rem;
+
+        .card-header {
+            border-bottom: 1rem solid #f1f1f1;
+            padding-bottom: 12rem;
+            
+            &:not(:last-child) {
+                margin-bottom: 42rem;
+            }
+        }
+        
+        .card-title {
+            justify-content: center;
+            font-size: 14rem;
+            line-height: 17rem;
+            color: black;
+        }
+
+        .card-body {
+            padding: 0 20rem;
+        }
+    }
+
+    &.has-started-time-checked {
+        .control {
+            &.is-started-time {
+                &::after {
+                    color: #f9b037;
+                }
+            }
+
+            &.is-finished-time {
+                &::after {
+                    color: black;
+                }
+            }
+        }
+
+        .buttons {
+            &.is-commute-times {
+                .button {
+                    &:first-child {
+                        border-color: #dbdbdb;
+                        background-color: #dbdbdb;
+                    }
+                }
+            }
+        }
+    }
+
+    &.has-finished-time-checked {
+        .control {
+            &.is-finished-time {
+                &::after {
+                    color: #0071db;
+                }
+            }
+        }
+        .buttons {
+            &.is-commute-times {
+                .button {
+                    &:last-child {
+                        border-color: #dbdbdb;
+                        background-color: #dbdbdb;
+                    }
+                }
+            }
+        }
+    }
+
+    &.has-fields {
+        padding: 29rem 20rem;
+    }
+
+    ~ .no-result {
+        display: none;
+    }
+}
+
+.card-header {
+    position: relative;
+
+    .button {
+        &.is-refresh {
+            position: absolute;
+            top: 28rem;
+            right: 4rem;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 19rem;
+    }
+
+    &.is-horizontal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &.has-icon {
+        align-items: center;
+        margin: 0.65em 1.05em 0em;
+        border-bottom: 1rem solid #dbdbdb;
+        padding-bottom: 0.15em;
+        box-shadow: none;
+        font-size: 18rem;
+        color: #151515;
+
+        .icon {
+            .is-subtitle {
+                margin-top: 0.4em;
+                width: 26rem;
+                height: 26rem;
+            }
+        }
+
+        .card-title {
+            padding: 15rem;
+        }
+    }
+
+    &.has-background-color {
+        padding: 11rem 18rem;
+        background-color: #d6d6d6;
+        box-shadow: none;
+
+        .card-title {
+            font-size: 18rem;
+            color: #151515;
+        }
+    }
+
+    &.is-alert {
+        margin: 0;
+        padding-top: 19rem;
+        padding-bottom: 10rem;
+    }
+}
+
+.card-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 16rem;
+    line-height: 19rem;
+    color: black;
+
+    &.is-centered {
+        justify-content: center;
+    }
+}
+
+.card-title-date {
+    font-weight: 700;
+
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+.card-sub-title {
+    font-size: 14rem;
+    color: #666;
+}
+
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10rem;
+    cursor: pointer;
+}
+
+.card-image {
+    display: block;
+    position: relative;
+}
+
+.card-body {
+    background-color: transparent;
+
+    &.is-horizontal {
+        display: flex;
+    }
+
+    &.has-no-padding {
+        padding: 0;
+    }
+}
+
+.card-description {
+    margin-right: 5rem;
+    font-size: 17rem;
+    line-height: 20rem;
+    text-align: right;
+    color: #151515;
+
+    &.is-aligned-left {
+        text-align: left;
+    }
+}
+
+.card-description-item {
+    margin-right: 13rem;
+}
+
+.card-description-number {
+    margin-right: 10rem;
+    font-size: 40rem;
+    font-weight: 600;
+    line-height: 48rem;
+}
+
+.card-description-unit {
+    font-size: 20rem;
+    font-weight: 500;
+    line-height: 48rem;
+
+    &:not(:last-child) {
+        &:not(.is-last) {
+            margin-right: 9rem;
+        }
+    }
+}
+
+.card-description-increase {
+    position: relative;
+    font-size: 14rem;
+    line-height: 17rem;
+    color: #d40000;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -12rem;
+        transform: translateY(-50%);
+        width: 7rem;
+        height: 5rem;
+        background-image: url(../background-images/svg/triangle.svg);
+    }
+}
+
+.card-footer {
+    padding-top: 19rem;
+    padding-bottom: 29rem;
+}
+
+.card-footer-item {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5rem;
+
+    &:not(:last-child) {
+        border-right: 1rem solid $border-light;
+    }
+}
+
+.card-alert-text {
+    text-align: center;
+    font-size: 14rem;
+    font-weight: 500;
+    line-height: 17rem;
+    color: black;
+}
+
+@include to-mobile {
+    .card {
+        &.is-login {
+            border-radius: 13rem;
+            padding: 60rem 30rem 97rem;
+            width: 100%;
+
+            .button {
+                &:not(:last-child) {
+                    margin-bottom: 18rem;
+                }
+            }
+        }
+    }
+
+    .card.is-login .checkbox span,
+    .card.is-login a {
+        font-size: 14rem;
+        line-height: 17rem;
+        color: #6e6e6e;
+    }
+}

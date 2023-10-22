@@ -1,0 +1,51 @@
+.notification {
+    @include block;
+    @include ltr {
+        padding: 12.5rem 25rem 12.5rem 15rem;
+    }
+    @include rtl {
+        padding: 12.5rem 15rem 12.5rem 25rem;
+    }
+    position: relative;
+    border: 1rem solid;
+    border-left-width: 4rem;
+
+    a:not(.button):not(.dropdown-item) {
+        text-decoration: underline;
+        color: currentColor;
+    }
+
+    strong {
+        color: currentColor;
+    }
+
+    code,
+    pre {
+        background: $scheme-main;
+    }
+
+    pre code {
+        background: transparent;
+    }
+
+    > .delete {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+    }
+
+    .title,
+    .subtitle,
+    .content {
+        color: currentColor;
+    }
+
+    @each $name, $pair in $notification-colors {
+        &.is-#{$name} {
+            border-color: map-get($pair, "notification-border-color");
+            border-left-color: map-get($pair, "notification-border-left-color");
+            background-color: map-get($pair, "notification-bg");
+            background-image: url('data:image/svg+xml;base64,#{map-get($pair, "notification-bg-img")}');
+        }
+    }
+}

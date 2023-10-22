@@ -1,0 +1,19 @@
+.is-grown-vertically {
+    &:not(.column) {
+        flex: 1 !important;
+    }
+
+    &:not(.columns) {
+        flex-direction: column !important;
+
+        &:not(.tabs-content) {
+            &:not(.tab-content) {
+                display: flex !important;
+            }
+        }
+    }
+
+    &.is-even {
+        flex: 0 0%;
+    }
+}

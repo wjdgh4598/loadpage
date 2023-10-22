@@ -1,0 +1,65 @@
+body {
+    font-family: $body-font-family;
+    font-size: 14rem;
+    line-height: 17rem;
+    color: #333;
+    background-color: transparent;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+}
+
+input {
+    accent-color: #151515;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    appearance: none;
+}
+
+a {
+    color: #9c9c9c;
+    text-decoration: none;
+}
+
+:focus {
+    outline: none;
+}
+
+option {
+    &:hover,
+    &:checked {
+        background-color: #151515;
+        color: white;
+    }
+}
+
+[class|="tui"] {
+    font-family: inherit;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 6rem;
+    height: 6rem;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}

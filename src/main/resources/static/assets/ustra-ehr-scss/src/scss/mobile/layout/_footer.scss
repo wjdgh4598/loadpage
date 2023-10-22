@@ -1,0 +1,14 @@
+$footer-color: false !default;
+
+.footer {
+    padding: 18rem;
+    background-color: #F2F5F6;
+
+    &.is-white {
+        background-color: white;
+    }
+
+    @if $footer-color {
+        color: $footer-color;
+    }
+}

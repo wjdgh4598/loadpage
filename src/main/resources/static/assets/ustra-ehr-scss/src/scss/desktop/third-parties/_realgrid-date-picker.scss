@@ -1,0 +1,214 @@
+.rg-button-calendar {
+    top: 50% !important;
+    right: 8rem !important;
+    transform: translateY(-50%);
+    width: 14rem !important;
+    height: 16rem !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='15.556' viewBox='0 0 14 15.556'%3E%3Cpath d='M13.889,9.556H10v3.889h3.889ZM13.111,1V2.556H6.889V1H5.333V2.556H4.556A1.548,1.548,0,0,0,3.008,4.111L3,15a1.555,1.555,0,0,0,1.556,1.556H15.444A1.56,1.56,0,0,0,17,15V4.111a1.56,1.56,0,0,0-1.556-1.556h-.778V1Zm2.333,14H4.556V6.444H15.444Z' transform='translate(-3 -1)' fill='%238e8e8e'/%3E%3C/svg%3E")
+        no-repeat;
+}
+
+.rg-calendar {
+    border: 1rem solid #585858 !important;
+    box-shadow: none !important;
+}
+
+.rg-calendar .rg-cal-header {
+    height: 40rem !important;
+    margin: 0 !important;
+    background: #fff !important;
+
+    .rg-cal-prev-month,
+    .rg-cal-next-month {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 7rem !important;
+        width: 28rem !important;
+        height: 28rem !important;
+        cursor: pointer;
+        background-image: none !important;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 5rem;
+            height: 9rem;
+        }
+    }
+
+    .rg-cal-prev-month {
+        left: 15rem !important;
+
+        &::before {
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.268' height='9.121'%3E%3Cpath data-name='패스 5' d='M4.914 8.767L.707 4.56 4.914.353' fill='none' stroke='%238e8e8e'/%3E%3C/svg%3E");
+        }
+    }
+
+    .rg-cal-next-month {
+        right: 15rem !important;
+
+        &::before {
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5.268' height='9.121'%3E%3Cpath data-name='패스 5' d='M.354.354l4.207 4.207L.354 8.768' fill='none' stroke='%238e8e8e'/%3E%3C/svg%3E")
+                0 0;
+        }
+    }
+
+    .rg-cal-today-button {
+        top: 8rem !important;
+        right: 40rem !important;
+        padding: 4rem;
+        border-color: #dbdbdb !important;
+
+        &:hover {
+            border-color: #151515 !important;
+            background-color: #151515 !important;
+        }
+    }
+
+    .rg-cal-prev-year,
+    .rg-cal-next-year {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-image: none !important;
+
+        &::before {
+            content: "";
+            border-left: 4rem solid transparent;
+            border-right: 4rem solid transparent;
+        }
+
+        &:hover {
+            background-color: #151515;
+        }
+    }
+
+    .rg-cal-next-year {
+        &::before {
+            border-bottom: 4rem solid #8e8e8e;
+        }
+
+        &:hover {
+            &::before {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+
+    .rg-cal-prev-year {
+        &::before {
+            border-top: 4rem solid #8e8e8e;
+        }
+
+        &:hover {
+            &::before {
+                border-top-color: #fff;
+            }
+        }
+    }
+}
+
+.rg-cal-yearmonth {
+    display: flex;
+    justify-content: center;
+    margin: 0 !important;
+    font-weight: 700;
+    font-size: 16rem;
+
+    .rg-cal-year,
+    .rg-cal-month {
+        position: static !important;
+        height: 40rem !important;
+        line-height: 40rem !important;
+        color: #151515 !important;
+    }
+}
+
+.rg-cal-days-table {
+    margin: 0 !important;
+}
+
+.rg-cal-weeks {
+    opacity: 1 !important;
+
+    th {
+        width: 40rem !important;
+        height: 40rem !important;
+        font-weight: 400;
+        font-size: 14rem;
+        color: #151515;
+
+        &.rg-cal-week-sat {
+            color: #4484d9 !important;
+        }
+
+        &.rg-cal-week-sun {
+            color: #c01e14 !important;
+        }
+    }
+}
+
+.rg-cal-day {
+    width: 40rem !important;
+    height: 40rem !important;
+    border-radius: 3rem !important;
+    color: #000 !important;
+
+    span {
+        font-weight: 700 !important;
+        font-size: 14rem !important;
+    }
+
+    &:hover {
+        border: 0 !important;
+        background-color: #f3f8fe !important;
+    }
+
+    &.rg-cal-week-sat {
+        color: #4484d9 !important;
+    }
+
+    &.rg-cal-week-sun {
+        color: #c01e14 !important;
+    }
+
+    &.rg-cal-focusday {
+        color: #fff !important;
+        background-color: #151515 !important;
+    }
+
+    &.rg-cal-today {
+        color: #151515 !important;
+        background-color: #f7f8f9 !important;
+    }
+
+    &.rg-cal-disable-day,
+    &.rg-cal-prev-day {
+        color: #dbdbdb !important;
+        background-color: #fff !important;
+    }
+
+    &.rg-cal-next-day {
+        color: #dbdbdb !important;
+    }
+}
+
+.rg-cal-buttons {
+    span {
+        &:hover {
+            border-color: transparent !important;
+        }
+    }
+}
+
+.rg-changed-marker {
+    display: none !important;
+}
+
+.has-required {
+    .rg-changed-marker {
+        display: block !important;
+    }
+}

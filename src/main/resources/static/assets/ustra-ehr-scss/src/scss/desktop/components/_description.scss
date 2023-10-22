@@ -1,0 +1,16 @@
+.description {
+    &.is-copyright {
+        font-size: 13rem;
+        line-height: 16rem;
+        color: #6e6e6e;
+    }
+}
+
+@include to-mobile {
+    .description {
+        &.is-copyright {
+            font-size: 11rem;
+            line-height: 14rem;
+        }
+    }
+}

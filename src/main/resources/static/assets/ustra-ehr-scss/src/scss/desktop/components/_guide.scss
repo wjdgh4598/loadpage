@@ -1,0 +1,26 @@
+.guide-text {
+    position: relative;
+    min-height: 18rem;
+    padding-left: 21rem;
+    font-size: 12rem;
+    line-height: 1.4;
+    color: #151515;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &.is-blue {
+        color: #333;
+    }
+
+    &.has-no-icon {
+        padding: 0;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 6rem;
+    }
+}
